@@ -30,119 +30,96 @@ import NorrisC from '../../assets/images/NorrisC.png'
 
 const { TabPane } = Tabs;
 const Home = () => {
-  new WOW().init()
-  const [buyShow,setBuyshow] = useState(false)
-  const [visible,setVisible] = useState(false)
-  const [walletShow,setWalletShow] = useState(false)
-  const [CoinbaseShow,setCoinbaseShow] = useState(false)
-  const [nftContract,setNftContract] = useState('')
-  const [introduce,setIntroduce] = useState([
-    { 
-      name:'JEFFK',
-      img:jeffk,
-      introduction:'VC, continuous entrepreneurs, early blockchain participants, extreme sports enthusiasts. Invested and participated in more than 20 start-ups. Cornell MBA'
-    },
-    { 
-      name:'NorrisC',
-      img:NorrisC,
-      introduction:'Norris C, a Hong Kong based designer, artist, economist. Norris past designing for powerful businessman, now he devoted himself to create a new era of meta-universe space.'
-    },
-    { 
-      name:'Boredfish',
-      img:Boredfish,
-      introduction:'A serial entrepreneurs and block-chain builder since 2015. Specialized in community operation, branding and research.'
-    },
-    { 
-      name:'KafkaCoo',
-      img:KafkaCoo,
-      introduction:'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT(BAYC,CryptoPunks,Moonbirds,Doodles,CloneX,etc..)'
-    }
-    
-  ])
-
-
-
-  const callback = (key) => {
-    console.log(key);
-  }
-
-  const inputChange = (e) => {
-    console.log(e.data);
-  }
-
-  const Mint = async() => {
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-    await nftContract.methods.mint(accounts[0],1).send({from:accounts[0],value:100000000000000})
-  }
-
-  const ConnetWallet = async() => {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum)
-    }
-    else if (window.web3) {
-      window.web3 = window.web3.currentProvider
-    }
-    else {
-      window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
-    }
-    const abi = [{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"string","name":"_initBaseURI","type":"string"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseExtension","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"cost","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_to","type":"address"},{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bool","name":"_state","type":"bool"}],"name":"pause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"paused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"removeWhitelistUser","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseExtension","type":"string"}],"name":"setBaseExtension","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newCost","type":"uint256"}],"name":"setCost","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newmaxMintAmount","type":"uint256"}],"name":"setmaxMintAmount","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"walletOfOwner","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"whitelistUser","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"whitelisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"payable","type":"function"}];
-    const nftContractAddress = '0x338F57FC318a755D970FF1A59b4Eb8cf4Dc23926'
-    const nftContract = new window.web3.eth.Contract(abi, nftContractAddress)
-    setNftContract(nftContract)
-
-  }
-
-  const WalletConnect = async() => {
-    const providerOptions = {
-      /* See Provider Options Section */
-        walletconnect: {
-          package: WalletConnectProvider, // required
-          options: {
-            infuraId: "84e02827a94446f38cb4b655cc275363" // required
-          }
-        },
-       
-    };
-
-  const web3Modal = new Web3Modal({
-    network: "ropsten", // optional
-    cacheProvider: true, // optional
-    providerOptions // required
-  })
-  
-  const provider = await web3Modal.connect();
-  
-  const web3 = new Web3(provider);
-  
-  console.log(web3);
-}
-
-  const Coinbase = async() => {
-    const providerOptions = {
-      /* See Provider Options Section */
+  const providerOptions = {
+    /* See Provider Options Section */
+      walletconnect: {
+        package: WalletConnectProvider, // required
+        options: {
+          infuraId: "84e02827a94446f38cb4b655cc275363" // required
+        }
+      },
       coinbasewallet: {
         package: CoinbaseWalletSDK, // Required
         options: {
           appName: "My Awesome App", // Required
           infuraId: "84e02827a94446f38cb4b655cc275363", // Required
           rpc: "", // Optional if `infuraId` is provided; otherwise it's required
-          chainId: 1, // Optional. It defaults to 1 if not provided
+          chainId: 3, // Optional. It defaults to 1 if not provided
           darkMode: false // Optional. Use dark theme, defaults to false
         }
       }
-    }
-    const web3Modal = new Web3Modal({
-      network: "ropsten", // optional
-      cacheProvider: true, // optional
-      providerOptions // required
-    })
-    
-    const provider = await web3Modal.connect();
-    
-    const web3 = new Web3(provider);
-    
-    console.log(web3);
+     
+  };
+const web3Modal = new Web3Modal({
+  network: "ropsten", // optional
+  cacheProvider: false, // optional
+  providerOptions // required
+})
+  new WOW().init()
+  const [provider, setProvider] = useState();
+  const [web3, setWeb3] = useState();
+  const [account, setAccount] = useState();
+  const [chainId, setChainId] = useState();
+  const [buyShow,setBuyshow] = useState(false)
+  const [nftContract,setNftContract] = useState('')
+  const [introduce,setIntroduce] = useState([
+  { 
+    name:'JEFFK',
+    img:jeffk,
+    introduction:'VC, continuous entrepreneurs, early blockchain participants, extreme sports enthusiasts. Invested and participated in more than 20 start-ups. Cornell MBA'
+  },
+  { 
+    name:'NorrisC',
+    img:NorrisC,
+    introduction:'Norris C, a Hong Kong based designer, artist, economist. Norris past designing for powerful businessman, now he devoted himself to create a new era of meta-universe space.'
+  },
+  { 
+    name:'Boredfish',
+    img:Boredfish,
+    introduction:'A serial entrepreneurs and block-chain builder since 2015. Specialized in community operation, branding and research.'
+  },
+  { 
+    name:'KafkaCoo',
+    img:KafkaCoo,
+    introduction:'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT(BAYC,CryptoPunks,Moonbirds,Doodles,CloneX,etc..)'
   }
+    
+  ])
+
+
+
+  const Mint = async() => {
+    const abi = [{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"string","name":"_initBaseURI","type":"string"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseExtension","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"cost","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_to","type":"address"},{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bool","name":"_state","type":"bool"}],"name":"pause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"paused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"removeWhitelistUser","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseExtension","type":"string"}],"name":"setBaseExtension","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newCost","type":"uint256"}],"name":"setCost","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newmaxMintAmount","type":"uint256"}],"name":"setmaxMintAmount","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"walletOfOwner","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"whitelistUser","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"whitelisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"payable","type":"function"}];
+    const nftContractAddress = '0x338F57FC318a755D970FF1A59b4Eb8cf4Dc23926'
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+    const nftContract = new web3.eth.Contract(abi,nftContractAddress)
+    setNftContract(nftContract);
+    await nftContract.methods.mint(accounts[0],1).send({from:accounts[0],value:100000000000000})
+  }
+  const refreshState = () => {
+    setAccount();
+    setChainId();
+  };
+
+  const WalletConnect = async() => {
+  const provider = await web3Modal.connect();
+  const web3 = new Web3(provider);
+  const accounts = await web3.eth.getAccounts()
+  const chainID = await web3.eth.getChainId();
+  setProvider(provider);
+  setWeb3(web3);
+  setChainId(chainID);
+  if (accounts) {
+    setAccount(accounts[0]);
+    document.getElementById("address").innerHTML = accounts[0];
+  }
+}
+async function DisConnect() {
+  const clear = await web3Modal.clearCachedProvider();
+  document.getElementById("address").innerHTML = "Connect";
+  refreshState();
+}
+
 
   return (
       <>
@@ -177,134 +154,21 @@ const Home = () => {
               <div className="headerConnect" onClick={()=>Mint()}>
                 mint
               </div>
-              <div className="headerConnect" onClick={()=>{
-                setVisible(true)
-                ConnetWallet()
+              <div id="address" className="headerConnect" onClick={()=>{
+                WalletConnect()
               }}>
-                Connect a Wallet
+                Connect
+              </div>
+              <div className="headerConnect" onClick={()=>{
+                DisConnect()
+              }}>
+                Disconnect
               </div>
             
-              
-              {/* <div className='icon' style={{marginLeft:'18px'}}>
-                <SoundFilled style={{color:'#fff',fontSize:'24px'}}/>
-              </div> */}
             </div>
           </div>
         </header>
-        {/* model 显示 */}
-        {
-          visible ? (
-            <div>
-              <div className="mask" onClick={()=>{
-                setVisible(false)
-                setCoinbaseShow(false)
-                setWalletShow(false)
-              }}> </div>
-              <div className="conenctShow">
-                  <div className="connectText" onClick={()=>{
-                    setVisible(!visible)
-                    // setWalletShow(!walletShow)
-                    WalletConnect()
-                  }}><img className="connectImg" src={Unnamed}/><div >WalletConnect</div></div>
-                  <div className="connectText" onClick={()=>{
-                    setVisible(!visible)
-                    // setCoinbaseShow(!CoinbaseShow)
-                    Coinbase()
-                    }}><img className="connectImg" src={wallet}/><div >Coinbase</div></div>
-                </div>
-            </div>
-          ):''
-        }
-        {
-          walletShow ? (
-            <div className="mask">
-              <div className="menuShow">
-                <div className="jcsb out">
-                  <div className="aic">
-                    <img className="menuShowIcon" src={wallets} />
-                    <div className="menuShowTitle">WalletConnect</div>
-                  </div>
-                  <div className="close" onClick={()=>{
-                    setCoinbaseShow(false)
-                    // setWalletShow(!walletShow)
-                  }}>
-                    <div className="closeIcon">
-                      <div className="closeLine1"></div>
-                      <div className="closeLine2"></div>
-                    </div>
-                  </div>
-                </div>
-                <Tabs defaultActiveKey="1" onChange={callback} centered tabBarGutter="600" size="large">
-                  <TabPane key="1" tab="二维码">
-                    <div className="walletQrcode">使用兼容 WalletConnect 的钱包扫描二维码</div>
-                    <img src={wechat}/>
-                  </TabPane>
-                  <TabPane key="2" tab="桌面">
-                    <div className="walletQrcode">选择你的钱包</div>
-                    <input 
-                      className="input"
-                      placeholder="Search" 
-                      onInput={inputChange}
-                    />
-                    <div className="walletTable">
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Ledger</div>
-                      </div>
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Infinity Wallet</div>
-                      </div>
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Ledger</div>
-                      </div>
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Infinity Wallet</div>
-                      </div>
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Ledger</div>
-                      </div>
-                      <div className="walletTableList">
-                        <img className="walletTableImg" src={sm}/>
-                        <div>Ledger</div>
-                      </div>
-                    </div>
-                  </TabPane>
-                </Tabs>
-              </div>
-            </div>
-          ):''
-        }
-        {
-          CoinbaseShow ? (
-            <div className="mask">
-              <div className="menuShow">
-                <div className="jcsb out">
-                  <div className="aic">
-                    <img className="menuShowIcon" src={wallets} />
-                    <div className="menuShowTitle">CoinbaseShow</div>
-                  </div>
-                  <div className="close" onClick={()=>{
-                     setCoinbaseShow(!CoinbaseShow)
-                     setWalletShow(false)
-                  }}>
-                    <div className="closeIcon">
-                      <div className="closeLine1"></div>
-                      <div className="closeLine2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          ):''
-        }
-
-        {/* <div>address:<p id="address"></p></div> */}
-
+        
         {/* 中间 */}
         <div  className="center">
           <div className="introduction">
