@@ -250,7 +250,7 @@ const web3Modal = new Web3Modal({
 
         {/* 脚步介绍 */}
         <div className="footer">
-            <div className="footerSec">The Doodles Founders</div>
+            <div className="footerSec">The HyperDog Founders</div>
             <div className="footerThi">
               {/* <div className="footerBox">
                 <img src="https://doodles.app/images/doodle_poopie.png"/>
