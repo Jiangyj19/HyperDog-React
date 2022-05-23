@@ -183,7 +183,7 @@ const web3Modal = new Web3Modal({
                 }
               </div>
               <div className="headerMint headerConnect" onClick={()=>Mint()}>
-                mint
+                MINT
               </div>
               {/* <div className="headerConnect" onClick={()=>{
                 DisConnect()
