@@ -154,6 +154,9 @@ const web3Modal = new Web3Modal({
                 
 
               </div>
+              <div className="headerMint headerConnect" onClick={()=>Mint()}>
+                Mint
+              </div>
               <div style={{position: 'relative',display:'flex'}}>
                 {
                   account ? (
@@ -182,9 +185,7 @@ const web3Modal = new Web3Modal({
                   ):''
                 }
               </div>
-              <div className="headerMint headerConnect" onClick={()=>Mint()}>
-                mint
-              </div>
+              
               {/* <div className="headerConnect" onClick={()=>{
                 DisConnect()
               }}>
@@ -218,6 +219,7 @@ const web3Modal = new Web3Modal({
         {/* what is hyper dog */}
         <div className="centerUfo1">
           <div className="textStye">What is Hyper Dog ?</div>
+          <div style={{height:'46px'}}></div>
           <div className="info">Born in the Web3 world, HyperDog is a collection of 10,000 unusually super-excited</div>
           <div className="info">avatars with richly diverse rarity-backed features.</div>
           <div className="info">Holding a vision of driving the universe HYPER, HyperDog is created for builders,</div>

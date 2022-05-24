@@ -130,7 +130,7 @@ body{
 }
 .headerMint{
   width: 100px;
-  background:linear-gradient(to left top ,#fb1f83,#4728f8,#f09b68);
+  background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
   border: none;
 }
 .headerIcon{
@@ -248,7 +248,7 @@ body{
   font-size: 18px;
 }
 .centerUfo1{
-  padding: 200px 0;
+  padding-top: 200px;
 }
 .centerUfo{
   height: 100vh;
@@ -257,14 +257,14 @@ body{
 .textStye{
   margin: 0 auto 0;
   width: 1200px;
-  font-size: 40px;
+  font-size: 46px;
   color: #fff;
   text-align: center;
   font-family: Audiowide;
 }
 .logoText{
   color: #fff;
-  font-size: 160px;
+  font-size: 170px;
   font-family: Audiowide;
   text-align: center;
   width: 100%;
@@ -290,8 +290,8 @@ body{
   margin: 0 auto;
   color: #fff;
   font-weight: bold;
-  font-size: 28px;
-  width: 80%;
+  font-size: 21px;
+  width: 60%;
   text-align: center;
   user-select: none;
 }
@@ -306,6 +306,7 @@ body{
   min-width: 1200px;
   /* height: 100vh; */
   box-sizing: border-box;
+  padding-top: 150px;
 }
 .footerFir{
   margin: 0;
@@ -396,7 +397,7 @@ body{
   margin: 0 auto;
   width: 1200px;
   text-align: center;
-  margin-top: 100px;
+  margin: 50px 0 16px;
   color: #fff;
 }
 /* 
