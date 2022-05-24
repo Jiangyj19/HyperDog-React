@@ -1,6 +1,6 @@
 body{
   /* background: linear-gradient(180deg,#382653,#6681c5); */
-  background-color: #151515 !important;
+  background-color: #070511 !important;
   overflow-x: hidden;
 }
 .aic{
@@ -26,7 +26,7 @@ body{
   font-weight: 400;
   width: 100%;
   /* background-color: rgba(85,71,173,0.6); */
-  background-color: #2e2e2e;
+  background-color: #070511;
   border-radius: 0;
   line-height: 64px;
 }
@@ -58,11 +58,11 @@ body{
   font-size: 32px;
   cursor:pointer;
 }
-.headerTitle :nth-child(1){
+.headerTitle :nth-child(1).headerImg{
   margin-left: 0;
   font-family: Audiowide;
 }
-.headerTitle :nth-child(2){
+.headerTitle :nth-child(2).headerImg{
   background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
   -webkit-background-clip: text;
   color: transparent;
@@ -142,6 +142,7 @@ body{
 .headerMint:hover{
   border: none;
   cursor:pointer;
+  background: linear-gradient(90deg, #9D21FF 0%, #6821FF 59.37%, #3321FF 100%);
 }
 .headerIcon{
   display: flex;
@@ -150,15 +151,27 @@ body{
 }
 .contentText{
   position: fixed;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 8px;
   /* left: -10px; */
   top: 64px;
-  color: #3A2856;
+  color: #fff !important;
   font-size: 14px;
   font-family: Inter, sans-serif;
-  padding: 10px 16px;
+  padding: 8px;
   cursor:pointer;
+  background-color:#141414 !important;
+}
+.hangover{
+  font-size: 15px;
+  font-weight: 400;
+  padding: 3px 9px;
+  font-family: PingFang SC;
+}
+.hangover:hover{
+  padding: 3px 9px;
+  border-radius: 8px;
+  background-color: #2e2e2e;
 }
 .connectImg{
   height: 40px;
@@ -301,9 +314,10 @@ body{
   color: #fff;
   font-weight: bold;
   font-size: 21px;
-  width: 60%;
+  width: 65%;
   text-align: center;
   user-select: none;
+  font-family: PingFang SC;
 }
 /* 
   脚步的css
@@ -369,15 +383,16 @@ body{
   right: 0;
   width: 246px;
   height: 246px;
-  font-weight: 400;
-  font-family: Inter,sans-serif;
-  color: rgba(255,255,255,1);
+  font-weight: 600;
+  font-family: PingFang SC;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 17px;
   /* line-height: 1.5; */
   /* margin-bottom: 0.35em; */
   text-align: left;
   
   background-color: rgba(0, 0, 0, .6);
+  backdrop-filter: blur(32px);
   
 }
 .footerContentText{
@@ -552,7 +567,9 @@ body{
   margin-top: 10px;
   font-weight: 600;
 }
+.footerBox{
 
+}
 
 /* 
   =======  wow ======

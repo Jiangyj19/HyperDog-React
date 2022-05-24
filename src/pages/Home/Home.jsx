@@ -139,8 +139,8 @@ const web3Modal = new Web3Modal({
                 {
                   buyShow ? (
                     <div className="contentText" onMouseLeave={()=>setBuyshow(false)}>
-                      <div onClick={()=>window.open('https://www.baidu.com','_blank')}>OpenSea</div>
-                      <div>LooksRare</div>
+                      <div className="hangover" onClick={()=>window.open('https://www.baidu.com','_blank')}>OpenSea</div>
+                      <div className="hangover">LooksRare</div>
                     </div>
                   ):''
                 }
