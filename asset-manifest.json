@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HyperDog-React/static/css/main.0c086b7b.css",
-    "main.js": "/HyperDog-React/static/js/main.bd6ca8fd.js",
+    "main.js": "/HyperDog-React/static/js/main.c9d4ee78.js",
     "static/media/01.png": "/HyperDog-React/static/media/01.d177ba21e629c0291df0.png",
     "static/media/0.png": "/HyperDog-React/static/media/0.afcf67ef9c6a114e1827.png",
     "static/media/Boredfish.png": "/HyperDog-React/static/media/Boredfish.47a0646a01a3159b292b.png",
@@ -12,10 +12,10 @@
     "static/media/discord.svg": "/HyperDog-React/static/media/discord.1fc8f4bf62e8280039d6e3ed79169ac0.svg",
     "index.html": "/HyperDog-React/index.html",
     "main.0c086b7b.css.map": "/HyperDog-React/static/css/main.0c086b7b.css.map",
-    "main.bd6ca8fd.js.map": "/HyperDog-React/static/js/main.bd6ca8fd.js.map"
+    "main.c9d4ee78.js.map": "/HyperDog-React/static/js/main.c9d4ee78.js.map"
   },
   "entrypoints": [
     "static/css/main.0c086b7b.css",
-    "static/js/main.bd6ca8fd.js"
+    "static/js/main.c9d4ee78.js"
   ]
 }
