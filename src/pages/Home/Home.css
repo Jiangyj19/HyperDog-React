@@ -132,6 +132,7 @@ body{
   width: 100px;
   background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
   border: none;
+  /* font-family: PingFang; */
 }
 .headerIcon{
   display: flex;
