@@ -39,15 +39,17 @@ body{
 .headerCon{
   display: flex;
   align-items: center;
-  width: 1200px;
+  /* width: 1200px; */
+  width: 100%;
   line-height: 64px;
   margin: 0 auto;
   box-sizing: border-box;
   justify-content: space-between;
+  padding: 0 48px;
 }
 .headerImg{
 
-  font-family: Audiowide;
+  font-family: PingFang;
   margin-left: 50px;
   height: 36px;
   /* width: 100px; */
@@ -58,9 +60,10 @@ body{
 }
 .headerTitle :nth-child(1){
   margin-left: 0;
+  font-family: Audiowide;
 }
 .headerTitle :nth-child(2){
-  background: linear-gradient(to right,red,blue);
+  background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -78,8 +81,9 @@ body{
   line-height: 33px;
 }
 .headerConnect:hover{
-  background-color: #fff;
-  color: #000;
+  background-color: #F84848;
+  border: 1.5px solid #F84848;
+  /* color: #000; */
   cursor:pointer;
 }
 .headerDocs:hover{
@@ -110,6 +114,7 @@ body{
   cursor:pointer;
 }
 .headerConnect{
+  position: relative;
   border-radius: 8px;
   padding: 0 18px;
   height: 36px;
@@ -123,7 +128,7 @@ body{
   border-radius: 8px;
   border: 1px solid #fff;
   margin-left: 32px;
-  width: 200px;
+  width: 186px;
   overflow: hidden;
   text-overflow:ellipsis;
   text-align: center;
@@ -133,6 +138,10 @@ body{
   background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
   border: none;
   /* font-family: PingFang; */
+}
+.headerMint:hover{
+  border: none;
+  cursor:pointer;
 }
 .headerIcon{
   display: flex;
@@ -196,7 +205,7 @@ body{
 }
 .disConnect{
   position: absolute;
-  top: 64px;
+  top: 0;
   left: 0;
   background-color: #fff;
   border-radius: 8px;
@@ -243,7 +252,7 @@ body{
 .info{
   margin: 0 auto;
   width: 1200px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   color: #fff;
   text-align: center;
   font-size: 18px;
@@ -265,7 +274,7 @@ body{
 }
 .logoText{
   color: #fff;
-  font-size: 170px;
+  font-size: 176px;
   font-family: Audiowide;
   text-align: center;
   width: 100%;
@@ -279,10 +288,10 @@ body{
 
 .logo{
   position: absolute;
-  top: 30%;
+  top: 26%;
   left: calc(50% - 600px);
   /* background-color: #fff; */
-  width: 1200px;
+  /* width: 1200px; */
 }
 .logo img {
   width: 100%;
@@ -347,8 +356,8 @@ body{
   align-items: center;
 }
 .footerBox img{
-  height: 168px;
-  width: 168px;
+  height: 246px;
+  width: 246px;
   /* border-radius: 50%; */
   background-color: rgba(0,0,0,.4);
 }
@@ -358,19 +367,26 @@ body{
   left: 0;
   top: 0;
   right: 0;
-  width: 168px;
-  height: 168px;
+  width: 246px;
+  height: 246px;
   font-weight: 400;
   font-family: Inter,sans-serif;
   color: rgba(255,255,255,1);
-  font-size: 12px;
+  font-size: 17px;
   /* line-height: 1.5; */
   /* margin-bottom: 0.35em; */
   text-align: left;
+  
+  background-color: rgba(0, 0, 0, .6);
+  
+}
+.footerContentText{
+  position: absolute;
+  bottom: 0;
+  width: 246px;
   word-wrap: break-word;
   word-break: normal;
-  background-color: rgba(0, 0, 0, .6);
-  padding: 4px;
+  padding: 12px;
 }
 .footerUrl{
   margin: 0;

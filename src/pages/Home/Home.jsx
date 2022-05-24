@@ -82,7 +82,7 @@ const web3Modal = new Web3Modal({
   { 
     name:'KafkaCoo',
     img:KafkaCoo,
-    introduction:'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT(BAYC,CryptoPunks,Moonbirds,Doodles,CloneX,etc..)'
+    introduction:'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT(BAYC, CryptoPunks,Moonbirds,Doodles,CloneX,etc..)'
   }
     
   ])
@@ -109,7 +109,11 @@ const web3Modal = new Web3Modal({
     setWeb3(web3);
     setChainId(chainID);
     if (accounts) {
-      setAccount(accounts[0]);
+      let s = accounts[0].slice(0,4)
+      let e = accounts[0].slice(-5,-1)
+
+      console.log(s,e);
+      setAccount(s + '...' + e);
     }
   }
   async function DisConnect() {
@@ -131,7 +135,7 @@ const web3Modal = new Web3Modal({
               <div className="headerImg">HOME</div>
               <div className="headerImg">Gallery</div>
               <div className="headerImg" onClick={()=>setBuyshow(!buyShow)}>
-                <div >Buy<CaretDownOutlined style={{fontSize:'16px'}}/></div>
+                <div style={{fontFamily:'PingFang'}}>Buy<CaretDownOutlined style={{fontSize:'16px'}}/></div>
                 {
                   buyShow ? (
                     <div className="contentText" onMouseLeave={()=>setBuyshow(false)}>
@@ -160,13 +164,12 @@ const web3Modal = new Web3Modal({
               <div style={{position: 'relative',display:'flex'}}>
                 {
                   account ? (
-                    <div className="headerConnect" onClick={()=>{
+                    <div className="headerConnect" onMouseEnter={()=>{
                       setDisConnect(true)
-                    }}>
+                    }} onMouseLeave={()=>setDisConnect(false)} onClick={()=>DisConnect()}>
                       {
-                        account
+                        disConnect ? 'Sign Out' : account
                       }
-                      <CaretDownOutlined />
                     </div>
                     ):(
                        <div className="headerConnect" onClick={()=>{
@@ -179,11 +182,11 @@ const web3Modal = new Web3Modal({
                     )
                 }
 
-                {
+                {/* {
                   disConnect ? (
                     <div className="disConnect" onClick={()=>DisConnect()} onMouseLeave={()=>setDisConnect(false)}>DisConnect</div>
                   ):''
-                }
+                } */}
               </div>
               {/* <div className="headerConnect" onClick={()=>{
                 DisConnect()
@@ -210,7 +213,7 @@ const web3Modal = new Web3Modal({
           <div className="logo">
             {/* <img  src={hyperdogLogo}/> */}
             <div className="logoText">HYPER DOG</div>
-            <div style={{height:'20px'}}></div>
+            {/* <div style={{height:'20px'}}></div> */}
             <div className="centerText">BAYC is a collection of 10,000 Bored Ape NFTs-unique digital collectibles living on the Ethereum blockchain</div>
           </div>
         </div>
@@ -266,7 +269,9 @@ const web3Modal = new Web3Modal({
                       <div style={{position:'relative'}}>
                         <img src={item.img} onMouseEnter={()=>setInfo(item.name)} />           
                         {
-                          info == item.name ?  <div className="footerContent">{item.introduction}</div> :  ''
+                          info == item.name ?  <div className="footerContent">
+                            <div className="footerContentText">{item.introduction}</div>
+                          </div> :  ''
                         }
                       </div>
                       <div className="footerName">{item.name}</div>
