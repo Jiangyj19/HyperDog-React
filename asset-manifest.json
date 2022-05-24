@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c086b7b.css",
+    "main.js": "/static/js/main.4dfb2f79.js",
+    "static/media/01.png": "/static/media/01.d177ba21e629c0291df0.png",
+    "static/media/0.png": "/static/media/0.afcf67ef9c6a114e1827.png",
+    "static/media/Boredfish.png": "/static/media/Boredfish.47a0646a01a3159b292b.png",
+    "static/media/jeffk.png": "/static/media/jeffk.70d0823dfe33481779e1.png",
+    "static/media/KafkaCoo.png": "/static/media/KafkaCoo.06fd37f16dbadd03c17c.png",
+    "static/media/NorrisC.png": "/static/media/NorrisC.b67a2e48edc5257d6dd4.png",
+    "static/media/HYPERDOGLOGO.png": "/static/media/HYPERDOGLOGO.257d7bf3b9de12882a21.png",
+    "static/media/discord.svg": "/static/media/discord.1fc8f4bf62e8280039d6e3ed79169ac0.svg",
+    "index.html": "/index.html",
+    "main.0c086b7b.css.map": "/static/css/main.0c086b7b.css.map",
+    "main.4dfb2f79.js.map": "/static/js/main.4dfb2f79.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c086b7b.css",
+    "static/js/main.4dfb2f79.js"
+  ]
+}
