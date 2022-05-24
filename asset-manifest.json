@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/HyperDogReact/static/css/main.0c086b7b.css",
-    "main.js": "/HyperDogReact/static/js/main.0dfef162.js",
-    "static/media/01.png": "/HyperDogReact/static/media/01.d177ba21e629c0291df0.png",
-    "static/media/0.png": "/HyperDogReact/static/media/0.afcf67ef9c6a114e1827.png",
-    "static/media/Boredfish.png": "/HyperDogReact/static/media/Boredfish.47a0646a01a3159b292b.png",
-    "static/media/jeffk.png": "/HyperDogReact/static/media/jeffk.70d0823dfe33481779e1.png",
-    "static/media/KafkaCoo.png": "/HyperDogReact/static/media/KafkaCoo.06fd37f16dbadd03c17c.png",
-    "static/media/NorrisC.png": "/HyperDogReact/static/media/NorrisC.b67a2e48edc5257d6dd4.png",
-    "static/media/HYPERDOGLOGO.png": "/HyperDogReact/static/media/HYPERDOGLOGO.257d7bf3b9de12882a21.png",
-    "static/media/discord.svg": "/HyperDogReact/static/media/discord.1fc8f4bf62e8280039d6e3ed79169ac0.svg",
-    "index.html": "/HyperDogReact/index.html",
-    "main.0c086b7b.css.map": "/HyperDogReact/static/css/main.0c086b7b.css.map",
-    "main.0dfef162.js.map": "/HyperDogReact/static/js/main.0dfef162.js.map"
+    "main.css": "/HyperDog-React/static/css/main.0c086b7b.css",
+    "main.js": "/HyperDog-React/static/js/main.bd6ca8fd.js",
+    "static/media/01.png": "/HyperDog-React/static/media/01.d177ba21e629c0291df0.png",
+    "static/media/0.png": "/HyperDog-React/static/media/0.afcf67ef9c6a114e1827.png",
+    "static/media/Boredfish.png": "/HyperDog-React/static/media/Boredfish.47a0646a01a3159b292b.png",
+    "static/media/jeffk.png": "/HyperDog-React/static/media/jeffk.70d0823dfe33481779e1.png",
+    "static/media/KafkaCoo.png": "/HyperDog-React/static/media/KafkaCoo.06fd37f16dbadd03c17c.png",
+    "static/media/NorrisC.png": "/HyperDog-React/static/media/NorrisC.b67a2e48edc5257d6dd4.png",
+    "static/media/HYPERDOGLOGO.png": "/HyperDog-React/static/media/HYPERDOGLOGO.257d7bf3b9de12882a21.png",
+    "static/media/discord.svg": "/HyperDog-React/static/media/discord.1fc8f4bf62e8280039d6e3ed79169ac0.svg",
+    "index.html": "/HyperDog-React/index.html",
+    "main.0c086b7b.css.map": "/HyperDog-React/static/css/main.0c086b7b.css.map",
+    "main.bd6ca8fd.js.map": "/HyperDog-React/static/js/main.bd6ca8fd.js.map"
   },
   "entrypoints": [
     "static/css/main.0c086b7b.css",
-    "static/js/main.0dfef162.js"
+    "static/js/main.bd6ca8fd.js"
   ]
 }
