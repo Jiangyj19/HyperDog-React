@@ -181,7 +181,6 @@ body {
   cursor: pointer;
 }
 .headerConnect {
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,22 +188,36 @@ body {
   font-family: "PingFang SC";
   width: 186px;
   height: 44px;
+  background: transparent;
   font-size: 15px;
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   border: 1px solid #fff;
   margin-left: 32px;
-  background: #070511;
+}
+.headerConnect::before {
+  margin-left: 32px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  background: #31b13a;
+  z-index:-1;
+}
+.headerConnect:hover::before{
+  width: 186px;
 }
 .headerConnect:hover {
-  background: #ffffff;
-  color: #070511;
   cursor: pointer;
 }
 .headerMint:hover {
-  border: none;
   color: #070511;
+  border: none;
   cursor: pointer;
   background: linear-gradient(90deg, #9d21ff 0%, #6821ff 59.37%, #3321ff 100%);
 }
@@ -239,7 +252,7 @@ body {
   font-size: 15px;
   transition: all 0.4s;
 }
-    
+
     .headerIcon {
       display: flex;
   align-items: center;
