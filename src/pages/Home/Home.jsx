@@ -163,7 +163,7 @@ const web3Modal = new Web3Modal({
               <div style={{position: 'relative',display:'flex'}}>
                 {
                   account ? (
-                    <div className="headerConnect" onMouseEnter={()=>{
+                    <div className="headerConnect" id="signout" onMouseEnter={()=>{
                       setDisConnect(true)
                     }} onMouseLeave={()=>setDisConnect(false)} onClick={()=>DisConnect()}>
                       {
