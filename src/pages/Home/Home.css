@@ -1,19 +1,19 @@
 @import "../../assets/styles/font.css";
-body{
+body {
   /* background: linear-gradient(180deg,#382653,#6681c5); */
   background-color: #070511 !important;
   overflow-x: hidden;
 }
-.aic{
+.aic {
   display: flex;
   align-items: center;
 }
-.jcsb{
+.jcsb {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header{
+.header {
   position: fixed;
   z-index: 1100;
   top: 0;
@@ -31,13 +31,12 @@ body{
   border-radius: 0;
   line-height: 64px;
 }
-.headerTitle{
+.headerTitle {
   display: flex;
   align-items: center;
   height: 64px;
-  
 }
-.headerCon{
+.headerCon {
   display: flex;
   align-items: center;
   /* width: 1200px; */
@@ -48,30 +47,33 @@ body{
   justify-content: space-between;
   padding: 0 48px;
 }
-.headerImg{
-  
-  font-family:'PingFang SC';
+.headerImg {
+  font-family: "PingFang SC";
   margin-left: 48px;
   height: 36px;
   /* width: 100px; */
   color: #fff;
   font-size: 24px;
   line-height: 31px;
-  cursor:pointer;
+  cursor: pointer;
 }
-.headerTitle :nth-child(1).headerImg{
+.headerTitle :nth-child(1).headerImg {
   display: flex;
   align-items: center;
   margin-left: 0;
   min-width: 165px;
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  
 }
-.headerTitle :nth-child(2).headerImg{
-  background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+.headerTitle :nth-child(2).headerImg {
+  background: linear-gradient(
+      360deg,
+      rgba(255, 171, 46, 0.93) 0%,
+      rgba(255, 255, 255, 0) 90.91%
+    ),
+    linear-gradient(90deg, #ff2171 0%, #9d21ff 47.4%, #3321ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -79,7 +81,7 @@ body{
   line-height: 29px;
   width: 59px;
   height: 29px;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   font-style: normal;
   font-weight: 600;
   flex: none;
@@ -88,61 +90,57 @@ body{
   display: flex;
   align-items: center;
 }
-.headerTitle :nth-child(3).headerImg{
+.headerTitle :nth-child(3).headerImg {
   width: 89px;
   height: 29px;
-  
+
   /* 19px / Semibold */
-  
-  font-family: 'PingFang SC';
+
+  font-family: "PingFang SC";
   font-style: normal;
   font-weight: 600;
   font-size: 19px;
   line-height: 29px;
   /* identical to box height, or 153% */
-  
-  
+
   /* 中性色/文字&图标Text/White/1-正文标题 */
-  
+
   color: rgba(255, 255, 255, 0.9);
-  
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
 }
-.headerTitle :nth-child(4).headerImg{
+.headerTitle :nth-child(4).headerImg {
   width: 89px;
   height: 29px;
-  
+
   /* 19px / Semibold */
-  
-  font-family: 'PingFang SC';
+
+  font-family: "PingFang SC";
   font-style: normal;
   font-weight: 600;
   font-size: 19px;
   line-height: 29px;
   /* identical to box height, or 153% */
-  
-  
+
   /* 中性色/文字&图标Text/White/1-正文标题 */
-  
+
   color: rgba(255, 255, 255, 0.9);
-  
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
 }
-.headerDocs{
+.headerDocs {
   /* margin-left: 36px; */
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 8px;
-  border: 1.5px solid rgba(0,0,0,0.4);
+  border: 1.5px solid rgba(0, 0, 0, 0.4);
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 8px;
@@ -151,13 +149,13 @@ body{
   height: 36px;
   line-height: 33px;
 }
-.headerDocs:hover{
-  cursor:pointer;
+.headerDocs:hover {
+  cursor: pointer;
 }
-.ant-popover-inner{
+.ant-popover-inner {
   border-radius: 8px !important;
 }
-.icon{
+.icon {
   width: 20px;
   height: 17.33px;
   text-align: center;
@@ -167,27 +165,28 @@ body{
   flex-direction: column;
   justify-content: center;
 }
-.icon:hover{
+.icon:hover {
   width: 20px;
   height: 17.33px;
   /* background: rgba(255, 255, 255, 0.9); */
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.3);
-  cursor:pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-.icon1:hover{
+.icon1:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.3);
-  cursor:pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-.headerConnect{
+.headerConnect {
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   width: 186px;
   height: 44px;
   font-size: 15px;
@@ -198,34 +197,27 @@ body{
   margin-left: 32px;
   background: #070511;
 }
-.headerConnect:hover{
-  background: #FFFFFF;
+.headerConnect:hover {
+  background: #ffffff;
   color: #070511;
-  cursor:pointer;
+  cursor: pointer;
 }
-.headerMint:hover{
+.headerMint:hover {
   border: none;
-  cursor:pointer;
-  background: linear-gradient(90deg, #9D21FF 0%, #6821FF 59.37%, #3321FF 100%);
+  color: #070511;
+  cursor: pointer;
+  background: linear-gradient(90deg, #9d21ff 0%, #6821ff 59.37%, #3321ff 100%);
 }
-.headerMint{
-/* Button / 44 / 渐变 */
-
-
-/* Auto layout */
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-
-/* Inside auto layout */
-flex: auto;
-order: 0;
-flex-grow: 0;
-
-
-
+.headerMint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Inside auto layout */
+  flex: auto;
+  order: 0;
+  flex-grow: 0;
+  
   width: 106px;
   height: 44px;
   padding: 6px 24px;
@@ -235,19 +227,25 @@ flex-grow: 0;
   margin-left: 34.38px;
   text-align: center;
   
-  background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 171, 46, 0.93) 0%,
+      rgba(255, 255, 255, 0) 90.91%
+      ),
+  linear-gradient(90deg, #ff2171 0%, #9d21ff 47.4%, #3321ff 100%);
   border-radius: 8px;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   font-style: normal;
   font-size: 15px;
+  transition: all 0.4s;
 }
-
-.headerIcon{
-  display: flex;
+    
+    .headerIcon {
+      display: flex;
   align-items: center;
   margin: 0 8px;
 }
-.contentText{
+.contentText {
   position: fixed;
   /* background-color: #fff; */
   border-radius: 8px;
@@ -257,28 +255,27 @@ flex-grow: 0;
   font-size: 14px;
   font-family: Inter, sans-serif;
   padding: 8px;
-  cursor:pointer;
-  background-color:#141414 !important;
+  cursor: pointer;
+  background-color: #141414 !important;
 }
-.hangover{
+.hangover {
   font-size: 15px;
   font-weight: 400;
   padding: 3px 9px;
   font-family: PingFang SC;
 }
-.hangover:hover{
+.hangover:hover {
   padding: 3px 9px;
   border-radius: 8px;
   background-color: #2e2e2e;
 }
-.connectImg{
+.connectImg {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-right: 18px;
-
 }
-.connectText{
+.connectText {
   /* margin-top: 36px; */
   display: flex;
   align-items: center;
@@ -291,7 +288,7 @@ flex-grow: 0;
   font-weight: 700;
   color: rgb(12, 12, 13);
 }
-.mask{
+.mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,12 +296,12 @@ flex-grow: 0;
   bottom: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 1;
   overflow: hidden;
   /* opacity: 0; */
 }
-.conenctShow{
+.conenctShow {
   position: fixed;
   top: 20%;
   left: calc(50% - 160px);
@@ -314,7 +311,7 @@ flex-grow: 0;
   background-color: #fff;
   z-index: 100;
 }
-.disConnect{
+.disConnect {
   position: absolute;
   top: 0;
   left: 0;
@@ -327,63 +324,60 @@ flex-grow: 0;
   height: 50px;
   line-height: 50px;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 /* 
   中间
 */
-.world{
+.world {
   display: flex;
   align-items: center;
   width: 1200px;
-  margin: 0 auto ;
+  margin: 0 auto;
   /* height: 100vh; */
 }
-.center{
+.center {
   /* margin-top: -64px; */
   position: relative;
 }
-.introduction{
+.introduction {
   margin-left: 50;
   font-weight: 400;
-  font-family: Inter,sans-serif;
-  color: rgba(255,255,255,1);
+  font-family: Inter, sans-serif;
+  color: rgba(255, 255, 255, 1);
   font-size: 1rem;
   line-height: 1.5;
   width: 480px;
   word-wrap: break-word;
 }
-.info1{
+.info1 {
   /* text */
 
+  width: 456px;
 
-width: 456px;
+  /* 21px/Regular */
 
-/* 21px/Regular */
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 31px;
+  /* or 148% */
 
-font-family: 'PingFang SC';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 31px;
-/* or 148% */
+  /* 中性色/文字&图标Text/White/1-正文标题 */
 
+  color: rgba(255, 255, 255, 0.9);
 
-/* 中性色/文字&图标Text/White/1-正文标题 */
+  /* Inside auto layout */
 
-color: rgba(255, 255, 255, 0.9);
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
-.introductionText{
+.introductionText {
   width: 456px;
   height: 40px;
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   font-style: normal;
   font-weight: 400;
   font-size: 31px;
@@ -393,7 +387,7 @@ flex-grow: 0;
   order: 0;
   flex-grow: 0;
 }
-.info{
+.info {
   margin: 0 auto;
   width: 888px;
   font-weight: 400;
@@ -402,14 +396,14 @@ flex-grow: 0;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
-.centerUfo1{
+.centerUfo1 {
   padding-top: 200px;
 }
-.centerUfo{
+.centerUfo {
   height: 100vh;
   padding-top: 200px;
 }
-.textStye{
+.textStye {
   margin: 0 auto 0;
   width: 888px;
   height: 59px;
@@ -422,8 +416,7 @@ flex-grow: 0;
   order: 0;
   flex-grow: 0;
 }
-.logoText{
-  
+.logoText {
   font-weight: 400;
   color: #fff;
   line-height: 186px;
@@ -437,16 +430,16 @@ flex-grow: 0;
   order: 0;
   flex-grow: 0;
 }
-.ufo{
+.ufo {
   width: 530px;
   height: 720px;
-  margin-left:100px ;
+  margin-left: 100px;
   flex: none;
   order: 1;
   flex-grow: 0;
 }
 
-.logo{
+.logo {
   position: absolute;
   top: 26%;
   left: calc(50% - 600px);
@@ -456,7 +449,7 @@ flex-grow: 0;
 .logo img {
   width: 100%;
 }
-.centerText{
+.centerText {
   width: 757px;
   height: 62px;
   font-weight: 400;
@@ -467,7 +460,7 @@ flex-grow: 0;
   width: 65%;
   text-align: center;
   user-select: none;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -475,7 +468,7 @@ flex-grow: 0;
 /* 
   脚步的css
 */
-.footer{
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,13 +478,13 @@ flex-grow: 0;
   box-sizing: border-box;
   padding-top: 150px;
 }
-.footerFir{
+.footerFir {
   margin: 0;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   opacity: 0.75;
   line-height: 1.57;
@@ -499,55 +492,55 @@ flex-grow: 0;
   margin-bottom: 32px;
   padding-top: 100px;
 }
-.footerSec{
+.footerSec {
   margin: 0;
   font-family: Audiowide;
   font-size: 36px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 2px #2e2731;
   line-height: 1.2;
   margin-bottom: 56px;
 }
-.footerThi{
+.footerThi {
   width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.footerBox{
+.footerBox {
   position: relative;
   /* flex: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.footerBox img{
+.footerBox img {
   height: 246px;
   width: 246px;
   /* border-radius: 50%; */
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.footerContent{
+.footerContent {
   position: absolute;
   bottom: 0;
   left: 0;
   top: 0;
   right: 0;
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px;
-gap: 10px;
-width: 246px;
-height: 246px;
-left: calc(50% - 246px/2);
-top: calc(50% - 246px/2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  width: 246px;
+  height: 246px;
+  left: calc(50% - 246px / 2);
+  top: calc(50% - 246px / 2);
   font-weight: 600;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   color: rgba(255, 255, 255, 0.9);
   font-size: 17px;
   /* line-height: 1.5; */
@@ -555,14 +548,13 @@ top: calc(50% - 246px/2);
   text-align: left;
   align-items: flex-end;
   flex: none;
-order: 1;
-flex-grow: 0;
-z-index: 1;
-  background-color: rgba(0, 0, 0, .6);
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(32px);
-  
 }
-.footerContentText{
+.footerContentText {
   position: absolute;
   bottom: 0;
   width: 246px;
@@ -570,29 +562,29 @@ z-index: 1;
   word-break: normal;
   padding: 12px;
 }
-.footerUrl{
+.footerUrl {
   margin: 0;
-  font-family: Chalkboard,sans-serif;
+  font-family: Chalkboard, sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.167;
   text-align: center;
   margin-top: 12px;
 }
-.footerName{
+.footerName {
   margin: 0;
-  font-family:Audiowide;
+  font-family: Audiowide;
   font-size: 20px;
   letter-spacing: 0.1rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   opacity: 0.75;
   line-height: 1.57;
   margin: 16px 0;
   opacity: 1;
 }
-.footerLast{
+.footerLast {
   margin: 0 auto;
   width: 1200px;
   text-align: center;
@@ -602,7 +594,7 @@ z-index: 1;
 /* 
   菜单显示
 */
-.menuShow{
+.menuShow {
   position: fixed;
   top: 16%;
   left: calc(50% - 250px);
@@ -610,26 +602,25 @@ z-index: 1;
   background-color: #fff;
   padding: 24px 24px 22px;
   border-radius: 24px;
-
 }
-.menuShowIcon{
+.menuShowIcon {
   height: 21px;
   /* width: 21px; */
 }
-.menuShowTitle{
+.menuShowTitle {
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
   margin-left: 5px;
 }
-.out{
+.out {
   position: absolute;
   top: -30px;
   left: 1%;
   width: 99%;
   height: 21px;
 }
-.close{
+.close {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -642,7 +633,7 @@ z-index: 1;
   height: 26px;
   cursor: pointer;
 }
-.closeIcon{
+.closeIcon {
   position: relative;
   top: 7px;
   right: 0;
@@ -651,12 +642,12 @@ z-index: 1;
   justify-content: center;
   transform: rotate(45deg);
 }
-.closeLine1{
+.closeLine1 {
   position: absolute;
   width: 100%;
   border: 1px solid rgb(48, 52, 59);
 }
-.closeLine2{
+.closeLine2 {
   position: absolute;
   width: 100%;
   border: 1px solid rgb(48, 52, 59);
@@ -667,11 +658,11 @@ z-index: 1;
 .ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
   padding: 8px 24px !important;
 }
-.ant-popover-placement-bottom{
-  position: fixed !important; 
+.ant-popover-placement-bottom {
+  position: fixed !important;
 }
 
-.walletQrcode{
+.walletQrcode {
   color: rgba(60, 66, 82, 0.6);
   font-size: 16px;
   font-weight: 600;
@@ -681,7 +672,7 @@ z-index: 1;
   text-align: center;
   width: 100%;
 }
-.input{
+.input {
   border: none;
   background: #d4d5d9;
   border-style: none;
@@ -700,13 +691,13 @@ z-index: 1;
   margin: 0;
   margin-bottom: 8px;
 }
-.walletTable{
+.walletTable {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
-.walletTableList{
+.walletTableList {
   /* flex: 0.25; */
   cursor: pointer;
   display: flex;
@@ -718,15 +709,15 @@ z-index: 1;
   flex-direction: column;
   text-decoration: none !important;
 }
-.walletTableImg{
+.walletTableImg {
   border-radius: 10px;
-    height: 42px;
-    margin: 0;
-    width: 42px;
-    background-size: cover !important;
-    box-shadow: 0 4px 12px 0 rgb(37 41 46 / 25%);
+  height: 42px;
+  margin: 0;
+  width: 42px;
+  background-size: cover !important;
+  box-shadow: 0 4px 12px 0 rgb(37 41 46 / 25%);
 }
-.walletTableList div{
+.walletTableList div {
   color: #424952;
   font-size: 16;
   text-decoration: none !important;
@@ -734,8 +725,7 @@ z-index: 1;
   margin-top: 10px;
   font-weight: 600;
 }
-.footerBox{
-
+.footerBox {
 }
 
 /* 
@@ -755,10 +745,10 @@ z-index: 1;
 }
 
 .experience .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
-  background: #EF233C;
+  background: #ef233c;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -783,14 +773,14 @@ z-index: 1;
 }
 
 .experience .timeline .timeline-item::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
   top: 48px;
   right: -8px;
   background: #ffffff;
-  border: 2px solid #EF233C;
+  border: 2px solid #ef233c;
   border-radius: 16px;
   z-index: 0;
 }
@@ -800,20 +790,20 @@ z-index: 1;
 }
 
 .experience .timeline .timeline-item::before {
-content: '';
-position: absolute;
-width: 0;
-height: 0;
-top: 46px;
-right: 10px;
-z-index: 0;
-border: 10px solid;
-border-color: transparent transparent transparent #dddddd;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 0;
+  border: 10px solid;
+  border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-left: 10px;
-border-color: transparent #dddddd transparent transparent;
+  left: 10px;
+  border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -822,7 +812,7 @@ border-color: transparent #dddddd transparent transparent;
   top: 44px;
   font-size: 16px;
   font-weight: 600;
-  color: #EF233C;
+  color: #ef233c;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -843,7 +833,7 @@ border-color: transparent #dddddd transparent transparent;
   background: #ffffff;
   position: relative;
   border-right: 5px solid #dddddd;
-  box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
@@ -871,51 +861,51 @@ border-color: transparent #dddddd transparent transparent;
 
 @media (max-width: 767.98px) {
   .experience .timeline::after {
-      left: 8px;
+    left: 8px;
   }
 
   .experience .timeline .timeline-item {
-      width: 100%;
-      padding-left: 38px;
-  }
-  
-  .experience .timeline .timeline-item.left {
-      padding-right: 0;
-  }
-  
-  .experience .timeline .timeline-item.right {
-      left: 0%;
-      padding-left: 38px;
+    width: 100%;
+    padding-left: 38px;
   }
 
-  .experience .timeline .timeline-item.left::after, 
-  .experience .timeline .timeline-item.right::after {
-      left: 0;
+  .experience .timeline .timeline-item.left {
+    padding-right: 0;
   }
-  
+
+  .experience .timeline .timeline-item.right {
+    left: 0%;
+    padding-left: 38px;
+  }
+
+  .experience .timeline .timeline-item.left::after,
+  .experience .timeline .timeline-item.right::after {
+    left: 0;
+  }
+
   .experience .timeline .timeline-item.left::before,
   .experience .timeline .timeline-item.right::before {
-      left: 18px;
-      border-color: transparent #dddddd transparent transparent;
+    left: 18px;
+    border-color: transparent #dddddd transparent transparent;
   }
-  
+
   .experience .timeline .timeline-item.left .timeline-date,
   .experience .timeline .timeline-item.right .timeline-date {
-      position: relative;
-      top: 0;
-      right: auto;
-      left: 0;
-      text-align: left;
-      margin-bottom: 10px;
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    text-align: left;
+    margin-bottom: 10px;
   }
-  
+
   .experience .timeline .timeline-item.left .timeline-text,
   .experience .timeline .timeline-item.right .timeline-text {
-      border-right: none;
-      border-left: 5px solid #dddddd;
+    border-right: none;
+    border-left: 5px solid #dddddd;
   }
 }
-.conta{
+.conta {
   background-color: #f1f1f1;
 }
 
@@ -945,7 +935,7 @@ border-color: transparent #dddddd transparent transparent;
   top: 11px;
   right: 0;
   left: -30px;
-  background: #EF233C;
+  background: #ef233c;
   z-index: -1;
 }
 
@@ -956,7 +946,7 @@ border-color: transparent #dddddd transparent transparent;
   height: 3px;
   top: 11px;
   left: 3px;
-  background: #EF233C;
+  background: #ef233c;
   z-index: 1;
 }
 
@@ -970,10 +960,10 @@ border-color: transparent #dddddd transparent transparent;
 
 @media (max-width: 767.98px) {
   .section-header h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 }
-.container{
+.container {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
