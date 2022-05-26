@@ -1,4 +1,10 @@
 const webpack = require("webpack");
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = function override(config) {
   const fallback = config.resolve.fallback || {};
   Object.assign(fallback, {
@@ -17,5 +23,19 @@ module.exports = function override(config) {
       Buffer: ["buffer", "Buffer"],
     }),
   ]);
+  config.module.rules = [
+      ...config.module.rules,
+     {
+      test: /\.scss$/,
+          use: [
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [resolve('./src/style/var.scss')]
+              }
+            }
+         ]
+     }
+  ]
   return config;
 };

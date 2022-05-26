@@ -1,0 +1,179 @@
+#Home {
+  .bg {
+    width: 100%;
+    height: 800px;
+    @include position-relative;
+    .bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bg-text-box {
+      @include maxWidth1440;
+      width: 100%;
+      @include posAl(0, 0, 0, auto);
+      z-index: 2020;
+      @include display-flex;
+      height: 800px;
+      .bg-text {
+        margin: 175px auto auto auto;
+        //margin: auto;
+        text-align: center;
+        .bg-text1 {
+          @include fontFamily-Audiowide;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 176px;
+          line-height: 186px;
+          color: $mainTextColor;
+          span {
+            @extend .bg-text1;
+          }
+        }
+        .bg-text2 {
+          width: 757px;
+          @include marginAuto;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 31px;
+          margin-top: 16px;
+          color: $mainTextColor;
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21px;
+            color: $mainTextColor;
+          }
+        }
+      }
+    }
+  }
+  .pageContent {
+    @include maxWidth1440;
+    @include marginAuto;
+    padding: 0 48px;
+    .whatisHyperDog {
+      padding: 146px 0 96px 0;
+      .title {
+        @include fontFamily-Audiowide;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 59px;
+        /* identical to box height */
+        text-align: center;
+        color: $mainTextColor;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 31px;
+        text-align: center;
+        margin: 46px auto auto auto;
+        max-width: 888px;
+        color: $mainTextColor;
+      }
+    }
+    .RoadmapHyperdog {
+      padding: 96px 0;
+      .view-Roadmap {
+        @include display-flex;
+        @include justify-content-center;
+        @include flex-wrap;
+        gap: 80px;
+        padding-top: 46px;
+        .view-Roadmap-subtitle {
+          @include fontFamily-Audiowide;
+          font-weight: 400;
+          font-size: 31px;
+          line-height: 40px;
+          color: $mainTextColor;
+          padding-top: 46px;
+        }
+        .view-Roadmap-ul {
+          .view-Roadmap-li {
+            color: $mainTextColor;
+            list-style: unset;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 31px;
+            max-width: 456px;
+            margin-left: 21px;
+            margin-top: 6px;
+          }
+        }
+        .view-Roadmap-img-box {
+          width: 530px;
+          height: 720px;
+          .view-Roadmap-img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .pageContent1 {
+    @include maxWidth1440;
+    @include marginAuto;
+    //padding: 0 150px;
+    .TheDoodlesFounders {
+      padding: 96px 0;
+      .df-ul {
+        //@include display-flex;
+        //@include align-items-center;
+        //@include flex-wrap;
+        //@include justify-content-center;
+        //gap: 46px;
+        margin: 46px auto auto auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 246px);
+        grid-gap: 70px 46px;
+        justify-content: center;
+        align-items: center;
+        place-content: center center;
+        .df-list {
+          .df-img {
+            width: 246px;
+            height: 246px;
+            @include position-relative;
+            @include cursor-pointer;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            .df-desc {
+              @include posAl(0, 0, 0, 0);
+              background: rgba(0, 0, 0, 0.6);
+              backdrop-filter: blur(16px);
+              -moz-backdrop-filter: blur(16px);
+              padding: 12px;
+              z-index: 99;
+              font-weight: 600;
+              font-size: 17px;
+              line-height: 27px;
+              color: $mainTextColor;
+              @include display-flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              opacity: 0;
+              @include transition-all-ease;
+            }
+            .df-desc1 {
+              opacity: 1;
+            }
+          }
+          .df-name {
+            @include fontFamily-Audiowide;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 32px;
+            text-align: center;
+            margin-top: 24px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}

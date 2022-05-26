@@ -1,18 +1,16 @@
-// import React from "react";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Home from "../pages/Home/Home";
-// // import Index from "../pages/Index/Index";
-// export default function Router() {
-//   {
-//     /* 所有的路由配置均在 BrowserRouter 内部 */
-//   }
-//   return (
-//     <BrowserRouter>
-//       {/* 使用 Routes 替换曾经的 Switch */}
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         {/* <Route path="index" element={<Index />} /> */}
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Index from '../pages/Index' // 主页
+import Gallery from '../pages/Gallery' // gallery
+
+export default function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+         <Route path="/" element={<Index />} />
+         <Route path="/gallery" element={<Gallery />} />
+         <Route path="*" element={<Index />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}

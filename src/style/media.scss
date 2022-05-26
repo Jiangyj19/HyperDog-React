@@ -1,0 +1,41 @@
+/**
+ * author: ღ
+ * date: 2022/5/26
+ */
+@media screen and (max-width: 1080px) {
+  #header .container {
+    padding: 0 20px !important;
+  }
+  #header .container .con-gap, #header .container .con-gap, #header .container .con-r {
+    gap: 20px !important;
+  }
+  #header .container .con-r .con-r-mint {
+    width: 100px !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  #header .container {
+    padding: 0 10px !important;
+  }
+  #header .container .con-gap, #header .container .con-gap, #header .container .con-r, #header .container .con-r .con-r-icons {
+    gap: 10px !important;
+  }
+  #header .container .con-r .con-r-mint {
+    width: 80px !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #header .container {
+    padding: 0 5px !important;
+  }
+  #header .container .con-gap, #header .container .con-gap, #header .container .con-r {
+    gap: 8px !important;
+  }
+  #header .container .con-r .con-r-icons {
+    gap: 0px !important;
+  }
+  #header .container .con-r .con-r-mint {
+    width: 70px !important;
+  }
+}

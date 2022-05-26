@@ -1,17 +1,16 @@
-import React from 'react'
-import { Route, Routes } from "react-router-dom";
-import './App.css';
-import 'wow.js/css/libs/animate.css'
-import Home from './pages/Home/Home'
+import React, { Fragment } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
+import './style/global.css'
+import './style/media.scss'
+import Router from './router/index'
 
 const App = () => {
   return(
-    <>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-      </Routes>
-    </>
+    <Fragment>
+        <Router />
+    </Fragment>
   )
 }
 
-export default App;
+export default App

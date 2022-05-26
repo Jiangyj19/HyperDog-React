@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../src/assets/fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PingFang';
+    src: url('../src/assets/fonts/PingFang-SC-Regular.ttf') format('truetype');
+}
+
+.class1 {
+    font-family: 'Audiowide';
+}
+
+.class2 {
+    font-family: 'PingFang';
+}

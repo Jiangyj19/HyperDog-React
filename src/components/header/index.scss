@@ -1,0 +1,205 @@
+/**
+ * author: ღ
+ * date: 2022/5/25
+ */
+#header {
+  @include fontFamily-PingFangSC;
+  width: 100%;
+  position: fixed;
+  z-index: 2021;
+  top: 0;
+  left: 0;
+  right: 0;
+  .container {
+    width: 100%;
+    height: 76px;
+    background: $mainBg;
+    padding: 0 48px;
+    @include display-flex;
+    @include align-items-center;
+    @include justify-content-space-between;
+    .logo {
+      width: 175px;
+      height: 44px;
+      @include cursor-pointer;
+    }
+    .con-gap {
+      gap: 48px;
+      @include display-flex;
+      @include align-items-center;
+    }
+    .con-l-tabs {
+    }
+    .tab {
+      color: $mainTextColor;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 29px;
+      @include cursor-pointer;
+      .Arrow {
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
+        @include transition-all-ease;
+      }
+    }
+    .tabBuy {
+      @include display-flex;
+      @include align-items-center;
+      @include position-relative;
+      .tabMore {
+        width: 117px;
+        height: 82px;
+        background: $mainBg1;
+        border-radius: 12px;
+        padding: 8px;
+        .moreSel {
+          width: 100%;
+          height: 31px;
+          border-radius: 8px;
+          text-align: center;
+          color: $mainTextColor;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 31px;
+          background: unset;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: $mainTextColor;
+          background-clip: unset;
+          text-fill-color: unset;
+          &:hover {
+            background: $mainBg2;
+          }
+        }
+      }
+      &:hover {
+        .Arrow {
+          transform: rotate(180deg);
+        }
+        .tabMore-box {
+          //@include posAl(32px, auto, -29.25px, auto);
+          @include posAl(26px, auto, -29.25px, auto);
+          z-index: 2022;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .tabMore-box {
+        @include posAl(50px, auto, -29.25px, auto);
+        //@include posAl(50px, auto, -29.25px, auto);
+        z-index: -1;
+        opacity: 0;
+        padding-top: 6px;
+        background: transparent;
+        @include transition-all-ease;
+        visibility: hidden;
+      }
+    }
+    .tab-active {
+      background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .tab-hover:hover {
+      @extend .tab-active;
+    }
+    .con-r {
+      @include display-flex;
+      @include align-items-center;
+      gap: 24px;
+      .con-r-icons {
+        @include display-flex;
+        @include align-items-center;
+        gap: 10px;
+        .con-r-ic {
+          width: 44px;
+          height: 44px;
+          @include cursor-pointer;
+        }
+        .con-r-ic11 {
+          display: block;
+        }
+        .con-r-ic12 {
+          display: none;
+        }
+        .con-r-ic21 {
+          display: block;
+        }
+        .con-r-ic22 {
+          display: none;
+        }
+        .con-r-icz-1:hover {
+          .con-r-ic12 {
+            display: block;
+          }
+          .con-r-ic11 {
+            display: none;
+          }
+        }
+        .con-r-icz-2:hover {
+          .con-r-ic22 {
+            display: block;
+          }
+          .con-r-ic21 {
+            display: none;
+          }
+        }
+      }
+      .con-r-mint {
+        width: 106px;
+        height: 44px;
+        background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 44px;
+        color: $mainTextColor;
+        @include cursor-pointer;
+        @include transition-all-ease;
+        &:hover {
+          background: linear-gradient(90deg, #9D21FF 0%, #6821FF 59.37%, #3321FF 100%);
+        }
+      }
+      .con-r-connect {
+        width: 186px;
+        height: 44px;
+        border: 1px solid $mainTextColor;
+        border-radius: 8px;
+        text-align: center;
+        color: $mainTextColor;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 44px;
+        @include cursor-pointer;
+        &:hover {
+          background: $mainBg3;
+          color: $TextColor1;
+        }
+      }
+      .con-r-connect-logged {
+        display: block;
+      }
+      .con-r-connect-logout {
+        background: $mainBg4;
+        border-color: $mainBg4;
+        display: none;
+        &:hover {
+          background: $mainBg4;
+          border-color: $mainBg4;
+          color: $mainTextColor;
+        }
+      }
+      .logged-logout:hover {
+        .con-r-connect-logged {
+          display: none;
+        }
+        .con-r-connect-logout {
+          display: block;
+        }
+      }
+    }
+  }
+}

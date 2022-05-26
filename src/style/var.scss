@@ -1,0 +1,103 @@
+/**
+ * author: ღ
+ * date: 2022/5/24
+ */
+$mainTextColor: rgba(255, 255, 255, 0.9);
+$TextColor1: #000000;
+$mainBg: #070511;
+$mainBg1: #141414;
+$mainBg2: #2E2E2E;
+$mainBg3: #ffffff;
+$mainBg4: #F84848;
+
+@mixin posAl($top, $left, $right, $bottom) {
+ position: absolute;
+ left: $left;
+ top: $top;
+ right: $right;
+ bottom: $bottom;
+}
+// @include posAl(0px, 0px, 0px, 0px);
+@mixin fontFamily-PingFangSC {
+ font-family: 'PingFang';
+}
+@mixin fontFamily-Audiowide {
+ font-family: 'Audiowide';
+}
+@mixin display-flex {
+ display: flex;
+}
+@mixin align-items-center {
+ align-items: center;
+}
+@mixin justify-content-center {
+ justify-content: center;
+}
+@mixin justify-content-space-between {
+ justify-content: space-between;
+}
+@mixin justify-content-space-around {
+ justify-content: space-around;
+}
+@mixin justify-content-space-evenly {
+ justify-content: space-evenly;
+}
+@mixin flex-wrap {
+ flex-wrap: wrap;
+}
+@mixin flex-direction-row {
+ flex-direction: row;
+}
+@mixin flex-direction-row-reverse {
+ flex-direction: row-reverse;
+}
+@mixin flex-direction-column {
+ flex-direction: column;
+}
+@mixin flex-direction-column-reverse {
+ flex-direction: column-reverse;
+}
+@mixin nor-ovf-txt-ovf {
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+@mixin no-select {
+ -webkit-touch-callout: none; /* iOS Safari */
+ -webkit-user-select: none; /* Chrome/Safari/Opera */
+ -khtml-user-select: none; /* Konqueror */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+ user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+@mixin marginAuto {
+ margin: auto;
+}
+@mixin position-relative {
+ position: relative;
+}
+@mixin opacity1 {
+ opacity: 1;
+}
+@mixin opacity0 {
+ opacity: 0;
+}
+@mixin opacity05 {
+ opacity: .5;
+}
+@mixin overflow-hidden {
+ overflow: hidden;
+}
+@mixin overflow-auto {
+ overflow: auto;
+}
+@mixin cursor-pointer {
+ cursor: pointer;
+}
+@mixin transition-all-ease {
+ transition: all .4s ease;
+}
+@mixin maxWidth1440 {
+ max-width: 1440px;
+ margin: auto;
+}
