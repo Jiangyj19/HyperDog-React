@@ -3,7 +3,7 @@
  * date: 2022/5/26
  */
 @media screen and (max-width: 1080px) {
-  #header .container {
+  #header .container, #Gallery {
     padding: 0 20px !important;
   }
   #header .container .con-gap, #header .container .con-gap, #header .container .con-r {
@@ -14,7 +14,7 @@
   }
 }
 @media screen and (max-width: 950px) {
-  #header .container {
+  #header .container, #Mint, #Gallery {
     padding: 0 10px !important;
   }
   #header .container .con-gap, #header .container .con-gap, #header .container .con-r, #header .container .con-r .con-r-icons {
@@ -26,7 +26,7 @@
 }
 
 @media screen and (max-width: 850px) {
-  #header .container {
+  #header .container, #Mint, #Gallery {
     padding: 0 5px !important;
   }
   #header .container .con-gap, #header .container .con-gap, #header .container .con-r {

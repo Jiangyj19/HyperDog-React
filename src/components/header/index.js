@@ -10,13 +10,17 @@ import Twitter from './../../assets/images/twitter.png'
 import Twitter1 from './../../assets/images/twitter1.png'
 import Discord from './../../assets/images/discord.png'
 import Discord1 from './../../assets/images/discord1.png'
+import loading from './../../assets/images/home/loading.png'
 
 const Headers = function (props) {
     const [ isLogin, setIsLogin ] = useState(false)
     const [ tabsToggle, setTabsToggle ] = useState('')
+    const [ networkLoading, setNetworkLoading ] = useState(false)
 
-    function handleNavigate(path) {
-        props.navigate(path)
+    function handleNavigate(path, state = {}) {
+        props.navigate(path, {
+            state
+        })
     }
 
     function handleReload() {
@@ -58,7 +62,7 @@ const Headers = function (props) {
                                 <img className={ 'con-r-ic con-r-ic22' } src={ Discord1 } alt=""/>
                             </div>
                         </div>
-                        <div className={ 'con-r-mint' }>MINT</div>
+                        <div className={ 'con-r-mint' } onClick={ () => handleNavigate('/mint') }>MINT</div>
                         { !isLogin && <div className={ 'con-r-connect' } onClick={ () => setIsLogin(true) }>CONNECT WALLET</div> }
                         { isLogin &&
                             <Fragment>
@@ -70,6 +74,19 @@ const Headers = function (props) {
                         }
                     </div>
                 </section>
+
+            {/*   Switch network  */}
+                { networkLoading && <section class={ 'switchNetwork' }>
+                    <div class={ 'swnet-Box' }>
+                        <div class={ 'sw-load-box' }>
+                            <img className={ 'sw-loading-img' } src={ loading } alt=""/>
+                        </div>
+                        <div class={ 'sw-title' }>Wrong network</div>
+                        <div className={ 'sw-subtitle' }>Looks like you connected to unsupported network. Change network to Mainnet</div>
+                        <div className={ 'sw-btn' }>Switch network</div>
+                    </div>
+                </section> }
+
             </header>
         </Fragment>
     )

@@ -81,3 +81,17 @@ input:focus {
   outline: none;
   background-color: rgba(0, 0, 0, 0);
 }
+
+::selection {
+  background: #9D21FF;
+  color: rgba(255, 255, 255, .9);
+  -webkit-text-fill-color: rgba(255, 255, 255, .9);
+}
+::-moz-selection {
+  background: #9D21FF;
+  -webkit-text-fill-color: rgba(255, 255, 255, .9);
+}
+::-webkit-selection {
+  background: #9D21FF;
+  -webkit-text-fill-color: rgba(255, 255, 255, .9);
+}

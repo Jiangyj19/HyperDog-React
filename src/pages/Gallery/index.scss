@@ -2,3 +2,50 @@
  * author: ღ
  * date: 2022/5/26
  */
+
+#Gallery {
+  $pub-height: calc(100vh - 152px);
+  $pub-height1: calc(100vh - 253px);
+  max-width: 1440px;
+  @include marginAuto;
+  padding: 0 48px;
+  height: $pub-height;
+  min-width: 775px;
+  .gallery-title {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 55px;
+    color: $mainTextColor;
+    @include fontFamily-Audiowide;
+    padding-top: 46px;
+    padding-bottom: 24px;
+  }
+  .filter-menu {
+    width: 324px;
+    height: $pub-height1;
+    overflow-y: auto;
+    .search {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      @include display-flex;
+      @include align-items-center;
+      width: 100%;
+      height: 49px;
+      border-top: 1px solid $mainBg2;
+      border-bottom: 1px solid $mainBg2;
+      .enterInput {
+        width: 100%;
+        background: rgba(255, 255, 255, 0);
+        border-color: transparent;
+        padding-left: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        @include fontFamily-PingFangSC;
+        color: $mainTextColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+/**
+ * author: ღ
+ * date: 2022/5/27
+ */
+#Mint {
+  width: 100%;
+  min-height: calc(100vh - 152px);
+  min-width: 775px;
+  //padding: 0 48px;
+  @include display-flex;
+  .mint-content {
+    @include marginAuto;
+    width: 856px;
+    .goBack {
+      gap: 6px;
+      display: inline-flex;
+      padding-bottom: 26px;
+      @include align-items-center;
+      @include cursor-pointer;
+      @include no-select;
+      .goBackIc {
+        font-size: 17px;
+        color: $mainTextColor;
+      }
+      .goBackText {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 27px;
+        color: $mainTextColor;
+      }
+    }
+  }
+  .mint-box {
+    @include display-flex;
+    @include align-items-center;
+    gap: 46px;
+    .FillCotainer {
+      width: 405px;
+      height: 405px;
+      border-radius: 22px;
+      .FillCotainernft {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 22px;
+      }
+    }
+    .FillCotainer1 {
+      background: $mainBg1;
+      width: 405px;
+      min-height: 405px;
+      height: unset;
+      padding: 24px;
+      .r-title {
+        @include fontFamily-Audiowide;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: center;
+        color: $mainTextColor;
+      }
+      .r-subtitle {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 27px;
+        color: $textColor2;
+        text-align: center;
+        margin-top: 2px;
+      }
+      .fillCotainer-ul {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $mainBg2;
+        .fillCotainer-ul-li {
+          @include display-flex;
+          @include align-items-center;
+          @include justify-content-space-between;
+          margin-top: 24px;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 27px;
+        }
+      }
+      .will-pay-box {
+        @include display-flex;
+        @include align-items-center;
+        @include justify-content-space-between;
+        margin-top: 24px;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 27px;
+      }
+      .li-label {
+        color: $textColor3;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      .li-value {
+        color: $mainTextColor;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      .li-value1 {
+        color: $textColor3;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      .mint-button {
+        width: 100%;
+        height: 56px;
+        margin: 12px auto auto auto;
+        border-radius: 8px;
+        line-height: 56px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 19px;
+        color: $mainTextColor;
+        @include cursor-pointer;
+        @include no-select;
+      }
+      .mint-button1 {
+        background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+        &:hover {
+          background: linear-gradient(90deg, #9D21FF 0%, #6821FF 59.37%, #3321FF 100%);
+        }
+      }
+      .mint-button2 {
+        background: $textColor3;
+      }
+    }
+  }
+}
