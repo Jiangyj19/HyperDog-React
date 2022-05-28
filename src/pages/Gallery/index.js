@@ -69,6 +69,9 @@ const Gallery = props => {
         onChange([])
         setSearch('')
     }
+    useEffect(() => {
+        handleResetFilters()
+    }, [])
 
     function funcFilter() {
         console.log(page)
