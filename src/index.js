@@ -5,7 +5,7 @@ import App from './App'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-    <div style={ { paddingTop: '76px' } }>
+    <div className={'indexPaddingTop'} style={ { paddingTop: '76px' } }>
       <App />
     </div>
 )

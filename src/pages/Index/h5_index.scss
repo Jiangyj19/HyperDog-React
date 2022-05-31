@@ -1,0 +1,224 @@
+/**
+ * author: ღ
+ * date: 2022/6/1
+ */
+@media screen and (max-width: 800px) {
+  #Home {
+    min-width: unset;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 .15 * 2rem !important;
+    .bg {
+      width: 100%;
+      height: 5 * 2rem;
+      @include position-relative;
+      .bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bg-text-box {
+        @include maxWidth1440;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        @include display-flex;
+        height: 5 * 2rem;
+        .bg-text {
+          margin: 2rem auto auto auto;
+          //margin: auto;
+          text-align: center;
+          .bg-text1 {
+            @include fontFamily-Audiowide;
+            font-style: normal;
+            font-weight: 400;
+            font-size: .46 * 2rem;
+            line-height: .59 * 2rem;
+            color: $mainTextColor;
+            span {
+              @extend .bg-text1;
+            }
+          }
+          .bg-text2 {
+            width: 100%;
+            @include marginAuto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: .15 * 2rem;
+            line-height: .25 * 2rem;
+            margin-top: .16 * 2rem;
+            color: $mainTextColor;
+            span {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 21px;
+              color: $mainTextColor;
+            }
+          }
+        }
+      }
+    }
+    .pageContent {
+      @include maxWidth1440;
+      @include marginAuto;
+      padding: 0 0;
+      .whatisHyperDog {
+        padding: .48 * 2rem 0;
+        .title {
+          @include fontFamily-Audiowide;
+          font-weight: 400;
+          font-size: .27 * 2rem;
+          line-height: .34 * 2rem;
+          /* identical to box height */
+          text-align: center;
+          color: $mainTextColor;
+        }
+        .text {
+          font-weight: 400;
+          font-size: .15 * 2rem;
+          line-height: .25 * 2rem;
+          text-align: center;
+          margin: .24 * 2rem auto auto auto;
+          max-width: unset;
+          color: $mainTextColor;
+        }
+      }
+      .RoadmapHyperdog {
+        padding: .48 * 2rem 0;
+        position: relative;
+        .view-Roadmap {
+          @include display-flex;
+          @include justify-content-center;
+          @include flex-wrap;
+          gap: 0;
+          padding-top: .23 * 2rem;
+          .view-Roadmap-subtitle {
+            @include fontFamily-Audiowide;
+            font-weight: 400;
+            font-size: .27 * 2rem;
+            line-height: .34 * 2rem;
+            color: $mainTextColor;
+            padding-top: .24 * 2rem;
+            //padding-left: .3rem;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+            padding-bottom: .06 * 2rem;
+          }
+          .view-Roadmap-ul {
+            .view-Roadmap-li {
+              color: $mainTextColor;
+              list-style: inside;
+              font-weight: 400;
+              font-size: .15 * 2rem;
+              line-height: .25 * 2rem;
+              max-width: unset;
+              margin-left: 0;
+              margin-top: .06 * 2rem;
+              &:nth-child(1) {
+                margin-top: 0;
+              }
+            }
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+          }
+          .view-Roadmap-img-box {
+            width: 3.58* 2rem;
+            height: 4.86 * 2rem;
+            position: absolute;
+            z-index: -1;
+            bottom: 5px;
+            .view-Roadmap-img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    .pageContent1 {
+      @include maxWidth1440;
+      @include marginAuto;
+      //padding: 0 150px;
+      .TheDoodlesFounders {
+        padding: .46 * 2rem 0 0 0;
+        .df-ul {
+          //@include display-flex;
+          //@include align-items-center;
+          //@include flex-wrap;
+          //@include justify-content-center;
+          //gap: 46px;
+          margin: .46 * 2rem auto auto auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 2.46 * 2rem);
+          grid-gap: .35 * 2rem .23 * 2rem;
+          justify-content: center;
+          align-items: center;
+          place-content: center center;
+          .df-list {
+            .df-img {
+              width: 2.46 * 2rem;
+              height: 2.46 * 2rem;
+              @include position-relative;
+              @include cursor-pointer;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+              .df-desc {
+                @include posAl(0, 0, 0, 0);
+                background: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(16px);
+                -moz-backdrop-filter: blur(16px);
+                padding: .12 * 2rem;
+                z-index: 99;
+                font-style: normal;
+                font-weight: 400;
+                font-size: .13 * 2rem;
+                line-height: .24 * 2rem;
+                color: $mainTextColor;
+                @include display-flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                opacity: 0;
+                @include transition-all-ease;
+              }
+              .df-desc1 {
+                opacity: 1;
+              }
+            }
+            .df-name {
+              @include fontFamily-Audiowide;
+              font-weight: 400;
+              font-size: .19 * 2rem;
+              line-height: .24 * 2rem;
+              text-align: center;
+              margin-top: .24 * 2rem;
+              color: #FFFFFF;
+            }
+          }
+          .df-decs-h5-pc {
+            display: none !important;
+          }
+          .df-decs-h5 {
+            display: block !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: .13 * 2rem;
+            line-height: .24 * 2rem;
+            color: $mainTextColor;
+            text-align: center;
+            margin-top: .06 * 2rem;
+            position: unset;
+            background: unset;
+            backdrop-filter: unset;
+            -moz-backdrop-filter: unset;
+            z-index: unset;
+            @include display-flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            opacity: unset;
+            @include transition-all-ease;
+          }
+        }
+      }
+    }
+  }
+}

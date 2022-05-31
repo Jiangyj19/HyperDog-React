@@ -4,6 +4,7 @@
  */
 import React, { Fragment, useState } from 'react'
 import './index.scss'
+import './h5_index.scss'
 import Headers from './../../components/header/index.js'
 import Footers from './../../components/footer/index.js'
 import withRouter from '../../components/withRouter'
@@ -13,6 +14,8 @@ import JEFFK from '../../assets/images/home/jeffk.png'
 import NorrisC from '../../assets/images/home/NorrisC.png'
 import Boredfish from '../../assets/images/home/Boredfish.png'
 import KafkaCoo from '../../assets/images/home/KafkaCoo.png'
+import Twitter from "../../assets/images/twitter.png";
+import Discord from "../../assets/images/discord.png";
 // import Texty from 'rc-texty'
 // import 'rc-texty/assets/index.css'
 
@@ -120,11 +123,14 @@ const Index = (props) => {
                                          onMouseLeave={ () => setDoodlesListSeeDesc('') }
                                     >
                                         <img src={ item.img } alt="" />
-                                        <div className={ `df-desc ${ doodlesListSeeDesc === item.name && 'df-desc1' }` }>
+                                        <div className={ `df-desc df-decs-h5-pc ${ doodlesListSeeDesc === item.name && 'df-desc1' }` }>
                                              { item.desc }
                                         </div>
                                     </div>
                                     <p className={ 'df-name' }>{ item.name }</p>
+                                    <div className={ `df-desc df-decs-h5 ${ doodlesListSeeDesc === item.name && 'df-desc1' }` }>
+                                        { item.desc }
+                                    </div>
                                 </li>
                             )}
                         </ul>

@@ -5,6 +5,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import { LeftOutlined } from '@ant-design/icons'
 import './index.scss'
+import './h5_index.scss'
 import withRouter from '../../components/withRouter'
 import Headers from './../../components/header/index.js'
 import Footers from './../../components/footer/index.js'

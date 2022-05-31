@@ -2,6 +2,9 @@
  * author: ღ
  * date: 2022/5/26
  */
+#h5_header {
+  display: none;
+}
 @media screen and (max-width: 1080px) {
   #header .container, #Gallery {
     padding: 0 20px !important;
@@ -37,5 +40,14 @@
   }
   #header .container .con-r .con-r-mint {
     width: 70px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ .indexPaddingTop {
+   padding-top: 1.12rem !important;
+ }
+  #header, .container, #Mint, #Gallery {
+    padding: 0 .15 * 2rem !important;
   }
 }

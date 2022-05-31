@@ -1,0 +1,141 @@
+/**
+ * author: ღ
+ * date: 2022/6/1
+ */
+/**
+ * author: ღ
+ * date: 2022/5/27
+ */
+@media screen and (max-width: 800px) {
+  #Mint {
+    width: 100%;
+    min-height: unset;
+    min-width: unset;
+    padding: 0 .15 * 2rem;
+    //padding: 0 48px;
+    @include display-flex;
+    .mint-content {
+      @include marginAuto;
+      width: 100%;
+      .goBack {
+        gap: .06 * 2rem;
+        display: inline-flex;
+        padding-bottom: .26 * 2rem;
+        margin-top: .2 * 2rem;
+        @include align-items-center;
+        @include cursor-pointer;
+        @include no-select;
+        .goBackIc {
+          font-size: .15 * 2rem;
+          color: $mainTextColor;
+        }
+        .goBackText {
+          font-weight: 600;
+          font-size: .15 * 2rem;
+          line-height: .25 * 2rem;
+          color: $mainTextColor;
+        }
+      }
+    }
+    .mint-box {
+      @include display-flex;
+      @include align-items-center;
+      @include flex-direction-column;
+      gap: .46 * 2rem;
+      width: 100%;
+      .FillCotainer {
+        width: 100%;
+        height: auto;
+        border-radius: .22 * 2rem;
+        .FillCotainernft {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: .22 * 2rem;
+        }
+      }
+      .FillCotainer1 {
+        background: $mainBg1;
+        width: 100%;
+        min-height: 4.05 * 2rem;
+        height: unset;
+        padding: .24 * 2rem;
+        .r-title {
+          @include fontFamily-Audiowide;
+          font-weight: 400;
+          font-size: .25 * 2rem;
+          line-height: .35 * 2rem;
+          text-align: left;
+          color: $mainTextColor;
+        }
+        .r-subtitle {
+          font-weight: 400;
+          font-size: .17 * 2rem;
+          line-height: .27 * 2rem;
+          color: $textColor2;
+          text-align: left;
+          margin-top: .02 * 2rem;
+        }
+        .fillCotainer-ul {
+          padding-bottom: .24 * 2rem;
+          border-bottom: 1px solid $mainBg2;
+          .fillCotainer-ul-li {
+            @include display-flex;
+            @include align-items-center;
+            @include justify-content-space-between;
+            margin-top: 24px;
+            font-weight: 600;
+            font-size: .17 * 2rem;
+            line-height: .27 * 2rem;
+          }
+        }
+        .will-pay-box {
+          @include display-flex;
+          @include align-items-center;
+          @include justify-content-space-between;
+          margin-top: 24px;
+          font-weight: 600;
+          font-size: .17 * 2rem;
+          line-height: .27 * 2rem;
+        }
+        .li-label {
+          color: $textColor3;
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        .li-value {
+          color: $mainTextColor;
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        .li-value1 {
+          color: $textColor3;
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        .mint-button {
+          width: 100%;
+          height: .44 * 2rem;
+          margin: .12 * 2rem auto auto auto;
+          border-radius: .08 * 2rem;
+          line-height: .44 * 2rem;
+          text-align: center;
+          font-weight: 600;
+          font-size: .19 * 2rem;
+          color: $mainTextColor;
+          @include cursor-pointer;
+          @include no-select;
+        }
+        .mint-button1 {
+          background: linear-gradient(360deg, rgba(255, 171, 46, 0.93) 0%, rgba(255, 255, 255, 0) 90.91%), linear-gradient(90deg, #FF2171 0%, #9D21FF 47.4%, #3321FF 100%);
+          &:hover {
+            background: unset;
+          }
+        }
+        .mint-button2 {
+          background: $textColor3;
+        }
+      }
+    }
+  }
+}

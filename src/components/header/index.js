@@ -4,7 +4,12 @@
  */
 import React, { Fragment, useState, useEffect } from 'react'
 import './index.scss'
+import './h5_index.scss'
 import Logo from './../../assets/images/LOGO.png'
+import Logoh5 from './../../assets/images/h5/LOGO.png'
+import Breadcrumbs from './../../assets/images/h5/Breadcrumbs.png'
+import Breadcrumbs1 from './../../assets/images/h5/Breadcrumbs1.png'
+import arrow from './../../assets/images/h5/arrow.png'
 import Arrow from './../../assets/images/Arrow.png'
 import Twitter from './../../assets/images/twitter.png'
 import Twitter1 from './../../assets/images/twitter1.png'
@@ -16,6 +21,8 @@ const Headers = function (props) {
     const [ isLogin, setIsLogin ] = useState(false)
     const [ tabsToggle, setTabsToggle ] = useState('')
     const [ networkLoading, setNetworkLoading ] = useState(false)
+    const [ h5buy, seth5buy ] = useState(false)
+    const [ h5modal, seth5modal ] = useState(false)
 
     function handleNavigate(path, state = {}) {
         props.navigate(path, {
@@ -87,6 +94,62 @@ const Headers = function (props) {
                     </div>
                 </section> }
 
+            </header>
+            <header id={ 'h5_header' }>
+                <div className={'logo-box'}>
+                    <img className={ 'logo' } src={ Logoh5 } alt="" />
+                </div>
+                <div className={ 'h5_he_r' }>
+                    { !isLogin && <div className={ 'btn' } onClick={ () => setIsLogin(true) }>CONNECT</div> }
+                    { isLogin && <div className={ 'btn' }>0x18D...724F</div> }
+                    <div onClick={ () => seth5modal(true) }>
+                        <img className={ 'Breadcrumbs' } src={ Breadcrumbs } alt="" />
+                    </div>
+                </div>
+                <div className={ `modal ${ h5modal? 'modal1' : ''}` }>
+                    <div>
+                        <div className={ 'modal-top' }>
+                            <div className={'logo-box1'}>
+                                <img className={ 'logo' } src={ Logoh5 } alt="" />
+                            </div>
+                            <div>
+                                <img onClick={ () => seth5modal(false) } className={ 'Breadcrumbs1' } src={ Breadcrumbs1 } alt="" />
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li onClick={ () => handleNavigate('/') } className={ `tabs ${tabsToggle === '/' && 'tab-active'}` }>
+                                    HOME
+                                </li>
+                                <li onClick={ () => handleNavigate('/gallery') } className={ `tabs ${tabsToggle === '/gallery' && 'tab-active'}` }>
+                                    GALLERY
+                                </li>
+
+                                <li className={ `tabs tabs1` } onClick={ () => seth5buy(!h5buy) }>
+                                    <span>BUY</span>
+                                    <img className={ `gt ${ !h5buy && 'rot' }` } src={ arrow } alt="" />
+                                </li>
+                                {
+                                    h5buy && <li className={ `tabs2` }>
+                                        <div className={ 'olink' } onClick={ () => window.open('https://opensea.io/') }>OpenSea</div>
+                                        <div className={ 'olink' } onClick={ () => window.open('https://looksrare.org/') }>LooksRare</div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={ 'con-r-mint' } onClick={ () => handleNavigate('/mint') }>MINT</div>
+                        <div className={ 'con-r-ic' }>
+                            <div className={'con-r-icz'}>
+                                <img className={ 'con-r-ic' } src={ Twitter } alt="" />
+                            </div>
+                            <div className={'con-r-icz'}>
+                                <img className={ 'con-r-ic' } src={ Discord } alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
         </Fragment>
     )
