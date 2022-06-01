@@ -8,10 +8,18 @@
     src: url('../src/assets/fonts/PingFang-SC-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'FuturaNowHeadline';
+    src: url('../src/assets/fonts/FuturaNowHeadline.ttf') format('truetype');
+}
+
 .class1 {
     font-family: 'Audiowide';
 }
 
 .class2 {
     font-family: 'PingFang';
+}
+.class3 {
+    font-family: 'FuturaNowHeadline';
 }

@@ -1,5 +1,7 @@
 #Home {
   min-width: 775px;
+  @include fadeIn;
+  @include fontFamily-PingFangSC;
   .bg {
     width: 100%;
     height: 800px;
@@ -23,7 +25,7 @@
         .bg-text1 {
           @include fontFamily-Audiowide;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 700;
           font-size: 176px;
           line-height: 186px;
           color: $mainTextColor;
@@ -38,7 +40,7 @@
           font-weight: 400;
           font-size: 21px;
           line-height: 31px;
-          margin-top: 16px;
+          margin-top: 60px;
           color: $mainTextColor;
           span {
             font-style: normal;
@@ -80,16 +82,22 @@
       .view-Roadmap {
         @include display-flex;
         @include justify-content-center;
-        @include flex-wrap;
+        @include align-items-center;
+        //@include flex-wrap;
         gap: 80px;
         padding-top: 46px;
         .view-Roadmap-subtitle {
           @include fontFamily-Audiowide;
-          font-weight: 400;
+          font-weight: 700;
           font-size: 31px;
-          line-height: 40px;
+          line-height: 43px;
           color: $mainTextColor;
-          padding-top: 46px;
+          //padding-top: 46px;
+          width: 456px;
+        }
+        .view-Roadmap-subtitle1 {
+          @extend .view-Roadmap-subtitle;
+          background: none;
         }
         .view-Roadmap-ul {
           .view-Roadmap-li {
@@ -139,15 +147,19 @@
             height: 246px;
             @include position-relative;
             @include cursor-pointer;
+            @include transition-all-ease;
+            &:hover {
+              transform: scale(1.05);
+            }
             img {
               width: 100%;
               height: 100%;
             }
             .df-desc {
               @include posAl(0, 0, 0, 0);
-              background: rgba(0, 0, 0, 0.6);
-              backdrop-filter: blur(16px);
-              -moz-backdrop-filter: blur(16px);
+              background: rgba(0, 0, 0, 0.8);
+              //backdrop-filter: blur(16px);
+              //-moz-backdrop-filter: blur(16px);
               padding: 12px;
               z-index: 99;
               font-weight: 600;
@@ -166,7 +178,7 @@
           }
           .df-name {
             @include fontFamily-Audiowide;
-            font-weight: 400;
+            font-weight: 700;
             font-size: 25px;
             line-height: 32px;
             text-align: center;
@@ -182,4 +194,9 @@
       }
     }
   }
+}
+.questionMark {
+  @include fontFamily-PingFangSC1;
+  font-size: inherit;
+  font-weight: inherit;
 }

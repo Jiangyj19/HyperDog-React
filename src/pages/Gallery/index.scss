@@ -8,21 +8,27 @@
   $pub-height1: calc(100vh - 277px);
   max-width: 1440px;
   @include marginAuto;
-  padding: 0 44px;
+  padding: 0 20px 0 44px;
   height: $pub-height;
   min-width: 775px;
+  @include fadeIn;
+  @include fontFamily-PingFangSC;
   .gallery-title {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 45px;
     line-height: 55px;
     color: $mainTextColor;
     @include fontFamily-Audiowide;
     padding-top: 46px;
-    padding-bottom: 24px;
+    // padding-bottom: 24px;
+  }
+  .h5-filter, .h5_close {
+    display: none;
   }
   .filter-menu {
     width: 324px;
     height: $pub-height1;
+    padding-top: 24px;
     .search {
       img {
         width: 20px;
@@ -162,16 +168,17 @@
   .gallery-view {
     @include display-flex;
     @include align-items-center;
-    gap: 24px;
+    //gap: 24px;
     .gallery-list-nft-view {
       flex: 1;
       height: $pub-height1;
-      overflow-y: auto;
+      //overflow-y: auto;
       &::-webkit-scrollbar {
         width: 0;
         height: 0;
       }
       .gallery-list-nft-ul {
+        padding: 24px 24px 0 24px;
         display: grid;
         grid-template-columns: repeat(auto-fill, 233px);
         grid-gap: 24px;
@@ -179,6 +186,10 @@
         justify-content: center;
         place-content: center center;
         .gallery-list-nft {
+          @include transition-all-ease;
+          &:hover {
+            transform: scale(1.05);
+          }
           @include cursor-pointer;
           .g-nft {
             width: 233px;
@@ -214,7 +225,8 @@
       line-height: 25px;
       color: $textColor3;
       text-align: center;
-      margin-top: 50px;
+      //margin-top: 50px;
+      margin-top: 100px;
     }
   }
 }

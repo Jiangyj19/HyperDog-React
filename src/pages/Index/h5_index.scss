@@ -7,7 +7,6 @@
     min-width: unset;
     width: 100%;
     overflow: hidden;
-    padding: 0 .15 * 2rem !important;
     .bg {
       width: 100%;
       height: 5 * 2rem;
@@ -24,6 +23,7 @@
         z-index: 1;
         @include display-flex;
         height: 5 * 2rem;
+        padding: 0 .15 * 2rem;
         .bg-text {
           margin: 2rem auto auto auto;
           //margin: auto;
@@ -31,7 +31,7 @@
           .bg-text1 {
             @include fontFamily-Audiowide;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             font-size: .46 * 2rem;
             line-height: .59 * 2rem;
             color: $mainTextColor;
@@ -61,12 +61,12 @@
     .pageContent {
       @include maxWidth1440;
       @include marginAuto;
-      padding: 0 0;
+      padding: 0 .15 * 2rem;
       .whatisHyperDog {
-        padding: .48 * 2rem 0;
+        padding: .48 * 2rem 0 0 0;
         .title {
           @include fontFamily-Audiowide;
-          font-weight: 400;
+          font-weight: 700;
           font-size: .27 * 2rem;
           line-height: .34 * 2rem;
           /* identical to box height */
@@ -84,17 +84,21 @@
         }
       }
       .RoadmapHyperdog {
-        padding: .48 * 2rem 0;
+        //padding: .48 * 2rem 0;
+        padding: 0;
         position: relative;
         .view-Roadmap {
           @include display-flex;
           @include justify-content-center;
-          @include flex-wrap;
+          @include align-items-center;
+          //@include flex-wrap;
           gap: 0;
           padding-top: .23 * 2rem;
           .view-Roadmap-subtitle {
+            width: 3.58* 2rem;
+            height: 3.86 * 2rem;
             @include fontFamily-Audiowide;
-            font-weight: 400;
+            font-weight: 700;
             font-size: .27 * 2rem;
             line-height: .34 * 2rem;
             color: $mainTextColor;
@@ -102,6 +106,17 @@
             //padding-left: .3rem;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
             padding-bottom: .06 * 2rem;
+            text-align: center;
+            margin: 0 auto;
+          }
+          .view-Roadmap-subtitle1 {
+            @extend .view-Roadmap-subtitle;
+            background: none;
+            width: 6rem;
+            padding-top: 0;
+            @include display-flex;
+            @include justify-content-center;
+            @include align-items-center;
           }
           .view-Roadmap-ul {
             .view-Roadmap-li {
@@ -121,7 +136,7 @@
           }
           .view-Roadmap-img-box {
             width: 3.58* 2rem;
-            height: 4.86 * 2rem;
+            height: 3.86 * 2rem;
             position: absolute;
             z-index: -1;
             bottom: 5px;
@@ -147,17 +162,20 @@
           //gap: 46px;
           margin: .46 * 2rem auto auto auto;
           display: grid;
-          grid-template-columns: repeat(auto-fill, 2.46 * 2rem);
+          grid-template-columns: repeat(auto-fill, 3.2rem);
           grid-gap: .35 * 2rem .23 * 2rem;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
           place-content: center center;
           .df-list {
             .df-img {
-              width: 2.46 * 2rem;
-              height: 2.46 * 2rem;
+              width: 3.2rem;
+              height: 3.2rem;
               @include position-relative;
               @include cursor-pointer;
+              &:hover {
+                transform: scale(1);
+              }
               img {
                 width: 100%;
                 height: 100%;
@@ -186,7 +204,7 @@
             }
             .df-name {
               @include fontFamily-Audiowide;
-              font-weight: 400;
+              font-weight: 700;
               font-size: .19 * 2rem;
               line-height: .24 * 2rem;
               text-align: center;
@@ -200,7 +218,7 @@
           .df-decs-h5 {
             display: block !important;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: .13 * 2rem;
             line-height: .24 * 2rem;
             color: $mainTextColor;

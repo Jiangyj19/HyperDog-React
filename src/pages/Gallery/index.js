@@ -5,10 +5,13 @@
 
 import React, { Fragment, useState, useEffect, useCallback } from 'react'
 import './index.scss'
+import './h5_index.scss'
 import Headers from './../../components/header/index.js'
 import Footers from './../../components/footer/index.js'
 import withRouter from '../../components/withRouter'
 import searchicon from '../../assets/images/search.png'
+import filter from '../../assets/images/h5/filter.png'
+import Close from '../../assets/images/h5/Close.png'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { Collapse, Skeleton, Divider } from 'antd'
 import _ from 'lodash'
@@ -36,6 +39,7 @@ const Gallery = props => {
     const [ panelList1, setPanelList1 ] =  useState([]) // 监测 重置、筛选项
     const [ page, setPage ] = useState({ page: 1 })
     const [ search, setSearch ] = useState('')
+    const [ h5Menu, seth5Menu ] = useState(false)
 
     let filterData = { listTitles: [], groupTitles: [] }
 
@@ -124,9 +128,19 @@ const Gallery = props => {
     return <Fragment>
         <Headers { ...props } />
         <main id='Gallery'>
-            <div className={ 'gallery-title' }>{ title }</div>
+            <div className={ 'gallery-title' }>
+                { title }
+                <div className={ 'h5-filter' } onClick={ () => seth5Menu(true) }>
+                    <img className={ 'filter-icon' } src={ filter } alt="" />
+                    <p className={ 'filter-text' }>Filters</p>
+                </div>
+            </div>
             <div className={ 'gallery-view' }>
-                <div className={ 'filter-menu' }>
+                <div className={ `filter-menu ${ h5Menu ? 'filter-menu1' : '' }` }>
+                    <div className={ 'h5_close' }>
+                        <p className={ 'filter-text' }>Filters</p>
+                        <img onClick={ () => seth5Menu(false) } className={ 'filter-icon' } src={ Close } alt="" />
+                    </div>
                     <div className={'search'}>
                         <img src={ searchicon } alt="" />
                         <input onInput={ handleSearch } value={ search } className={ 'enterInput' } type="text" placeholder='By ID' />
@@ -168,7 +182,7 @@ const Gallery = props => {
                             }
                         </Collapse>
                     </div>
-                    <div className={ 'gallery-filters-btn' } onClick={ () => handleResetFilters() }>RESET FILTERS</div>
+                    <div className={ 'gallery-filters-btn' } onClick={ () => handleResetFilters() }>Reset Filters</div>
                 </div>
                 <div className={ 'gallery-list-nft-view' } id={ 'scrollableDiv' }>
                     <InfiniteScroll

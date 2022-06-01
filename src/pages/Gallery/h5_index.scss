@@ -1,0 +1,269 @@
+/**
+ * author: ღ
+ * date: 2022/6/1
+ */
+@media screen and (max-width: 800px) {
+  #Gallery {
+    width: 100%;
+    $pub-height: calc(100vh - 3.31rem);
+    $pub-height1: calc(100vh - 3.31rem);
+    $pub-height2: calc(100vh - 6.8rem);
+    max-width: unset;
+    @include marginAuto;
+    padding: 0 .15 * 2rem;
+    height: $pub-height;
+    min-width: unset;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    .gallery-title {
+      font-weight: 700;
+      font-size: .25 * 2rem;
+      line-height: .35 * 2rem;
+      color: $mainTextColor;
+      @include fontFamily-Audiowide;
+      padding-top: .25 * 2rem;
+      // padding-bottom: 24px;
+      @include display-flex;
+      @include align-items-center;
+      @include justify-content-space-between;
+    }
+    .h5-filter, .h5_close {
+      @include display-flex;
+      @include align-items-center;
+    }
+    .h5_close {
+      @include justify-content-space-between;
+      padding-top: .25 * 2rem;
+    }
+    .filter-icon {
+      width: .2 * 2rem;
+      height: .2 * 2rem;
+    }
+    .filter-text {
+      font-weight: 400;
+      font-size: .14 * 2rem;
+      line-height: .24 * 2rem;
+      /* identical to box height, or 171% */
+      /* 中性色/文字&图标Text/4-白色/1-正文标题 */
+      color: rgba(255, 254, 252, 0.96);
+      padding-left: .06 * 2rem;
+      @include fontFamily-Audiowide;
+    }
+    .filter-menu {
+      width: 100%;
+      height: $pub-height1;
+      @include posAl(0, 0, 0, 0);
+      z-index: 2024;
+      padding: 0 .15 * 2rem 0 .15 * 2rem;
+      background: #070511;
+      @include transition-all-ease;
+      opacity: 0;
+      visibility: hidden;
+      .search {
+        margin-top: .18 * 2rem;
+        img {
+          width: .20 * 2rem;
+          height: .20 * 2rem;
+        }
+        @include display-flex;
+        @include align-items-center;
+        width: 100%;
+        height: .49 * 2rem;
+        border-top: 1px solid $mainBg2;
+        border-bottom: 1px solid $mainBg2;
+        .enterInput {
+          width: 100%;
+          background: rgba(255, 255, 255, 0);
+          border-color: transparent;
+          padding-left: 8px;
+          font-weight: 600;
+          font-size: .15 * 2rem;
+          line-height: .25 * 2rem;
+          @include fontFamily-PingFangSC;
+          color: $mainTextColor;
+        }
+      }
+      .filter-menu-collapse {
+        width: 100%;
+        max-height: $pub-height2;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 3px;
+          height: 3px;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: rgba(255, 255, 255, 0.2);
+          border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.2);
+          -webkit-box-shadow: rgba(255, 255, 255, 0.2);
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+          background: rgba(255, 255, 255, 0.3);
+        }
+        /* deep */
+        .ant-collapse {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          color: $mainTextColor;
+          font-variant: tabular-nums;
+          list-style: none;
+          font-feature-settings: 'tnum', "tnum";
+          background-color: transparent;
+          border: 0;
+          border-bottom: 0;
+          border-radius: 0px;
+          font-weight: 400;
+          font-size: .17 * 2rem;
+          line-height: .27 * 2rem;
+          @include fontFamily-PingFangSC;
+        }
+        .ant-collapse-ghost {
+          background-color: transparent;
+          border: 0;
+        }
+        .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+          position: relative;
+          @include display-flex;
+          flex-wrap: nowrap;
+          @include align-items-center;
+          padding: 0;
+          color: $mainTextColor;
+          cursor: pointer;
+          transition: all 0.3s, visibility 0s;
+          font-weight: 400;
+          font-size: .17 * 2rem;
+          line-height: .27 * 2rem;
+          @include fontFamily-PingFangSC;
+          @include no-select;
+        }
+        .ant-collapse > .ant-collapse-item {
+          border-bottom: 1px solid $mainBg2;
+          padding: .12 * 2rem 0;
+        }
+        .ant-collapse-item:last-child > .ant-collapse-content {
+          border-radius: 0;
+        }
+        .ant-collapse-content {
+          color: $mainTextColor;
+          background-color: transparent;
+          border-top: 0;
+        }
+        .ant-collapse-content > .ant-collapse-content-box {
+          padding: 0;
+        }
+        .ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+          border-radius: 0;
+        }
+        .filter-panel-ul {
+          .filter-panel-li {
+            margin-top: .18 * 2rem;
+            .filter-panel-li-box {
+              display: inline-flex;
+              gap: 8px;
+              @include cursor-pointer;
+              @include align-items-center;
+              @include no-select;
+            }
+            .filter-panel-li-checkbox {
+              width: .2 * 2rem;
+              height: .2 * 2rem;
+            }
+            .filter-panel-li-span {
+              font-weight: 400;
+              font-size: .15 * 2rem;
+              line-height: .25 * 2rem;
+            }
+          }
+        }
+      }
+      .gallery-filters-btn {
+        $gallery-filters-btn-height: .44 * 2rem;
+        width: 100%;
+        height: $gallery-filters-btn-height;
+        background: $mainBg5;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: .15 * 2rem;
+        line-height: $gallery-filters-btn-height;
+        color: $mainTextColor;
+        text-align: center;
+        @include no-select;
+        @include cursor-pointer;
+        margin-top: .12 * 2rem;
+      }
+    }
+    .filter-menu1 {
+      opacity: 1;
+      visibility: visible;
+    }
+    .gallery-view {
+      @include display-flex;
+      @include align-items-center;
+      //gap: 24px;
+      .gallery-list-nft-view {
+        flex: 1;
+        height: calc(100vh - 4.61rem);
+        //overflow-y: auto;
+        padding-top: .12 * 2rem;
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+        .gallery-list-nft-ul {
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 1.6 * 2rem);
+          grid-gap: .12 * 2rem;
+          align-items: center;
+          justify-content: center;
+          place-content: center center;
+          .gallery-list-nft {
+            @include transition-all-ease;
+            &:hover {
+              transform: scale(1);
+            }
+            @include cursor-pointer;
+            .g-nft {
+              width: 1.6 * 2rem;
+              height: 1.6 * 2rem;
+              object-fit: cover;
+              @include no-select;
+            }
+            .g-nft-name {
+              font-weight: 400;
+              font-size: .13 * 2rem;
+              line-height: .23 * 2rem;
+              color: $mainTextColor;
+              margin-top: .12 * 2rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .infinite-scroll-component__outerdiv, .infinite-scroll-component  {
+        width: 100% !important;
+        height: 100% !important;
+        //@include display-flex;
+        //@include flex-direction-column;
+        //@include justify-content-space-between;
+        &::-webkit-scrollbar {
+          width: 0 !important;
+          height: 0 !important;
+        }
+      }
+      .no-more {
+        font-weight: 400;
+        font-size: .13 * 2rem;
+        line-height: .23 * 2rem;
+        color: $textColor3;
+        text-align: center;
+        margin-top: .25 * 2rem;
+      }
+    }
+  }
+}

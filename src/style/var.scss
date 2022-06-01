@@ -22,11 +22,18 @@ $mainBg5: #5D24FF;
 }
 // @include posAl(0px, 0px, 0px, 0px);
 @mixin fontFamily-PingFangSC {
- font-family: 'PingFang';
+ //font-family: 'PingFang';
+ font-family: 'FuturaNowHeadline';
 }
 @mixin fontFamily-Audiowide {
- font-family: 'Audiowide';
+ font-family: 'FuturaNowHeadline';
+ //font-family: 'Audiowide';
 }
+
+@mixin fontFamily-PingFangSC1 {
+ font-family: 'PingFang';
+}
+
 @mixin display-flex {
  display: flex;
 }
@@ -103,4 +110,15 @@ $mainBg5: #5D24FF;
 @mixin maxWidth1440 {
  max-width: 1440px;
  margin: auto;
+}
+@mixin fadeIn {
+ animation: fadeIn .8s ease-in-out;
+}
+@keyframes fadeIn {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
 }

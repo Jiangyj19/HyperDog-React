@@ -7,7 +7,9 @@
   min-height: calc(100vh - 152px);
   min-width: 775px;
   //padding: 0 48px;
+  @include fadeIn;
   @include display-flex;
+  @include fontFamily-PingFangSC;
   .mint-content {
     @include marginAuto;
     width: 856px;
@@ -43,6 +45,11 @@
         height: 100%;
         object-fit: cover;
         border-radius: 22px;
+        @include cursor-pointer;
+        @include transition-all-ease;
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
     .FillCotainer1 {

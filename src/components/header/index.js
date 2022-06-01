@@ -150,6 +150,18 @@ const Headers = function (props) {
                         </div>
                     </div>
                 </div>
+
+                { networkLoading && <section class={ 'switchNetwork' }>
+                    <div class={ 'swnet-Box' }>
+                        <div class={ 'sw-load-box' }>
+                            <img className={ 'sw-loading-img' } src={ loading } alt=""/>
+                        </div>
+                        <div class={ 'sw-title' }>Wrong network</div>
+                        <div className={ 'sw-subtitle' }>Looks like you connected to unsupported network. Change network to Mainnet</div>
+                        <div className={ 'sw-btn' }>Switch network</div>
+                    </div>
+                </section> }
+
             </header>
         </Fragment>
     )
