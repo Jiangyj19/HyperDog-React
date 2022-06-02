@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 2025;
     @include display-flex;
     @include align-items-center;
     @include justify-content-space-between;
@@ -117,9 +117,10 @@
       padding-bottom: .4 * 2rem;
     }
     .modal1 {
-      z-index: 2021 !important;
+      z-index: 2026 !important;
       opacity: 1 !important;
       visibility: visible;
+      transform: translateZ(2025px);
     }
     .tabs {
       margin-top: .24 * 2rem;
