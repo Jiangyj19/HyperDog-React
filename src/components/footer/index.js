@@ -20,7 +20,7 @@ const Footers = function () {
                     </div>
                 </div>
                 <section className={ 'view-footer' }>
-                    ©2021 Apes In Space. All rights reserved.
+                    ©2022 HyperDog In Space. All rights reserved.
                 </section>
             </footer>
         </Fragment>

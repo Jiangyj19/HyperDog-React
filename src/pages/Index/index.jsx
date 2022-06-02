@@ -42,7 +42,7 @@ const Index = (props) => {
         {
             img: KafkaCoo,
             name: 'KafkaCoo',
-            desc: 'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT(BAYC, CryptoPunks, Moonbirds, Doodles, CloneX, etc..)'
+            desc: 'Core Team of FoundationDAO,by the people to bulid the ark of human civilization through web3. Also is a holder of blue chip NFT.'
         },
         {
             img: Frederick,
@@ -121,7 +121,7 @@ const Index = (props) => {
                 <div className={ 'pageContent pageContent1' }>
                     <div className={ 'whatisHyperDog TheDoodlesFounders' }>
                         <div className={ 'title' }>
-                            TheDoodlesFounders
+                            The HyperDog Founders
                         </div>
                         <ul className={ 'df-ul' }>
                             { doodlesList.map(item =>
