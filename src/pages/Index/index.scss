@@ -114,6 +114,7 @@
         .view-Roadmap-img-box {
           width: 530px;
           height: 720px;
+          flex-shrink: 0;
           .view-Roadmap-img {
             width: 100%;
             height: 100%;

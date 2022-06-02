@@ -21,6 +21,11 @@
     width: 595px !important;
   }
 }
+@media screen and (max-width: 1085px) {
+  #Home .pageContent .RoadmapHyperdog .view-Roadmap .view-Roadmap-subtitle, #Home .pageContent .RoadmapHyperdog .view-Roadmap .view-Roadmap-subtitle1 {
+    width: unset !important;
+  }
+}
 @media screen and (max-width: 950px) {
   #header .container, #Mint, #Gallery {
     padding: 0 10px !important;

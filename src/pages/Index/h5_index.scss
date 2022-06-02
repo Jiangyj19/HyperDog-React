@@ -95,7 +95,7 @@
           gap: 0;
           padding-top: .23 * 2rem;
           .view-Roadmap-subtitle {
-            width: 3.58* 2rem;
+            width: 3.58* 2rem !important;
             height: 3.86 * 2rem;
             @include fontFamily-Audiowide;
             font-weight: 700;
@@ -167,7 +167,7 @@
           justify-content: center;
           align-items: flex-start;
           place-content: center center;
-          width: unset;
+          width: unset !important;
           flex-wrap: unset;
           .df-list {
             .df-img {
