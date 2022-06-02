@@ -129,18 +129,20 @@
     .TheDoodlesFounders {
       padding: 96px 0;
       .df-ul {
-        //@include display-flex;
-        //@include align-items-center;
-        //@include flex-wrap;
-        //@include justify-content-center;
+        @include display-flex;
+        @include align-items-center;
+        @include flex-wrap;
+        @include justify-content-center;
         //gap: 46px;
         margin: 46px auto auto auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 246px);
-        grid-gap: 70px 46px;
-        justify-content: center;
-        align-items: center;
-        place-content: center center;
+        grid-gap: 46px 96px;
+        width: 930px;
+        //display: grid;
+        //grid-template-columns: repeat(auto-fill, 246px);
+        //grid-gap: 70px 46px;
+        //justify-content: center;
+        //align-items: center;
+        //place-content: center center;
         .df-list {
           .df-img {
             width: 246px;
