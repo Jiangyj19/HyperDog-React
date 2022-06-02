@@ -16,6 +16,11 @@
     width: 100px !important;
   }
 }
+@media screen and (max-width: 1050px) {
+  #Home .pageContent1 .TheDoodlesFounders .df-ul {
+    width: 595px !important;
+  }
+}
 @media screen and (max-width: 950px) {
   #header .container, #Mint, #Gallery {
     padding: 0 10px !important;
