@@ -137,7 +137,7 @@
         //gap: 46px;
         margin: 46px auto auto auto;
         grid-gap: 46px 96px;
-        width: 930px;
+        //width: 930px;
         //display: grid;
         //grid-template-columns: repeat(auto-fill, 246px);
         //grid-gap: 70px 46px;
@@ -146,8 +146,8 @@
         //place-content: center center;
         .df-list {
           .df-img {
-            width: 246px;
-            height: 246px;
+            width: 186px;
+            height: 186px;
             @include position-relative;
             @include cursor-pointer;
             @include transition-all-ease;
@@ -166,8 +166,8 @@
               padding: 12px;
               z-index: 99;
               font-weight: 600;
-              font-size: 17px;
-              line-height: 27px;
+              font-size: 12px;
+              line-height: 22px;
               color: $mainTextColor;
               @include display-flex;
               justify-content: flex-end;
