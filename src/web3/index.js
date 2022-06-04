@@ -89,6 +89,8 @@ const refreshState = () => {
         web3Obj[i] = null
     })
     window.localStorage.removeItem(web3Info)
+    window._FE_provider = null
+    window._FE_web3 = null
     return true
 }
 
