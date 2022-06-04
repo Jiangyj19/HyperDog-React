@@ -5,6 +5,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import './index.scss'
 import './h5_index.scss'
+import web3Method from './../../web3/index'
 import Logo from './../../assets/images/LOGO.png'
 import Logoh5 from './../../assets/images/h5/LOGO.png'
 import Breadcrumbs from './../../assets/images/h5/Breadcrumbs.png'
@@ -18,11 +19,15 @@ import Discord1 from './../../assets/images/discord1.png'
 import loading from './../../assets/images/home/loading.png'
 
 const Headers = function (props) {
-    const [ isLogin, setIsLogin ] = useState(false)
+
+    let info = web3Method.getWeb3Info()
+
+    const [ isLogin, setIsLogin ] = useState(info ? info.isLogin : null)
     const [ tabsToggle, setTabsToggle ] = useState('')
     const [ networkLoading, setNetworkLoading ] = useState(false)
     const [ h5buy, seth5buy ] = useState(false)
     const [ h5modal, seth5modal ] = useState(false)
+    const [ account, setAccount ] = useState( info ? info.viewAccounts : null)
 
     function handleNavigate(path, state = {}) {
         props.navigate(path, {
@@ -32,6 +37,28 @@ const Headers = function (props) {
 
     function handleReload() {
         window.location.reload()
+    }
+
+    function WalletConnect() {
+        web3Method.WalletConnect().then(res => {
+            info = web3Method.getWeb3Info()
+            console.log('info', info)
+            console.log('res', res)
+            setAccount(info.viewAccounts)
+            setIsLogin(info.isLogin)
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+    function DisConnect () {
+        web3Method.DisConnect().then(res => {
+            console.log(res)
+            setAccount(null)
+            setIsLogin(null)
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
     useEffect(() => {
@@ -70,12 +97,12 @@ const Headers = function (props) {
                             </div>
                         </div>
                         <div className={ 'con-r-mint' } onClick={ () => handleNavigate('/mint') }>MINT</div>
-                        { !isLogin && <div className={ 'con-r-connect' } onClick={ () => setIsLogin(true) }>CONNECT WALLET</div> }
+                        { !isLogin && <div className={ 'con-r-connect' } onClick={ () => WalletConnect() }>CONNECT WALLET</div> }
                         { isLogin &&
                             <Fragment>
                                 <div className={ 'logged-logout' }>
-                                    <div className={ 'con-r-connect con-r-connect-logged' }>0x18D...724F</div>
-                                    <div className={ 'con-r-connect con-r-connect-logout' } onClick={ () => setIsLogin(false) }>Sign Out</div>
+                                    <div className={ 'con-r-connect con-r-connect-logged' }>{ account }</div>
+                                    <div className={ 'con-r-connect con-r-connect-logout' } onClick={ () => DisConnect() }>Sign Out</div>
                                 </div>
                             </Fragment>
                         }
@@ -100,8 +127,8 @@ const Headers = function (props) {
                     <img className={ 'logo' } src={ Logoh5 } alt="" />
                 </div>
                 <div className={ 'h5_he_r' }>
-                    { !isLogin && <div className={ 'btn' } onClick={ () => setIsLogin(true) }>CONNECT</div> }
-                    { isLogin && <div className={ 'btn' }>0x18D...724F</div> }
+                    { !isLogin && <div className={ 'btn' } onClick={ () => WalletConnect() }>CONNECT</div> }
+                    { isLogin && <div className={ 'btn' }>{ account }</div> }
                     <div onClick={ () => seth5modal(true) }>
                         <img className={ 'Breadcrumbs' } src={ Breadcrumbs } alt="" />
                     </div>
