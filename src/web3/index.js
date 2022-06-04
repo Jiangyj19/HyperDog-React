@@ -55,7 +55,7 @@ const WalletConnect = async () => {
             const chainID = await web3.eth.getChainId();
             if (accounts) {
                 let s = accounts[0].slice(0, 5)
-                let e = accounts[0].slice(-5, -1)
+                let e = accounts[0].substring(accounts[0].length - 4, accounts[0].length)
                 // console.log(s,e);
                 web3Obj.chainID = chainID
                 web3Obj.accounts = accounts
