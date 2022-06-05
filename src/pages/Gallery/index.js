@@ -250,6 +250,19 @@ class Gallery extends Component {
         this.dataPhilosophical()
     }
 
+    loadMoreData1 = () => { // 获取数据 分页
+        let cpeg = this.state.page.currentPage + 1
+        this.setState({
+            page: {
+                pageSize: 50,
+                currentPage: cpeg,
+                total: this.state.metadata1.length
+            }
+        }, () => {
+            this.loadMoreData()
+        })
+    }
+
     componentDidMount() {
         this.handleResetFilters()
     }
@@ -318,7 +331,7 @@ class Gallery extends Component {
                         <Spin spinning={this.state.loading}>
                             <InfiniteScroll
                                 dataLength={ this.state.viewData.length }
-                                next={ this.loadMoreData }
+                                next={ this.loadMoreData1 }
                                 hasMore={ this.state.viewData.length < this.state.page.total }
                                 endMessage={ <div className={ 'no-more' }>no more</div> }
                                 scrollableTarget="scrollableDiv"
