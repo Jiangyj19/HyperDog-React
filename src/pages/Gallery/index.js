@@ -122,7 +122,13 @@ class Gallery extends Component {
         })
     }
 
+    scrollableDivST = () => {
+        let scrollableDiv =  document.getElementById('scrollableDiv')
+        scrollableDiv.scrollTo(0, 0)
+    }
+
    handleResetFilters = () => { // 重置
+       this.scrollableDivST()
        this.onChange([])
         if (this.state.reset) {
             let arr = this.state.panelList.map(i => { i.filterGroup = i.filterGroup.map(j => { j.active = false; return j }); return i })
@@ -140,6 +146,7 @@ class Gallery extends Component {
    }
 
     funcFilter = () => {
+        this.scrollableDivST()
         let arr = JSON.parse(json)
         let arrView = []
         let fd = this.state.filterData.listTitles
