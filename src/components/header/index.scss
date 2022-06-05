@@ -283,6 +283,14 @@
 #WEB3_CONNECT_MODAL_ID {
   .uYscM {
     z-index: 9999;
-    transform: translateZ(2026px);
+    transform: translateZ(9999px);
+  }
+}
+#walletconnect-wrapper {
+  z-index: 99999999999999;
+  transform: translateZ(99999999999999px);
+  .walletconnect-qrcode-modal {
+    z-index: 999999999999999;
+    transform: translateZ(999999999999999px);
   }
 }

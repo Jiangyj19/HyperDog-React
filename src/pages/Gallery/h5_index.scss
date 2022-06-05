@@ -208,7 +208,7 @@
       .gallery-list-nft-view {
         flex: 1;
         height: calc(100vh - 4.61rem);
-        //overflow-y: auto;
+        overflow-y: auto;
         padding-top: .12 * 2rem;
         &::-webkit-scrollbar {
           width: 0;
@@ -246,8 +246,8 @@
         }
       }
       .infinite-scroll-component__outerdiv, .infinite-scroll-component  {
-        width: 100% !important;
-        height: 100% !important;
+        //width: 100% !important;
+        //height: 100% !important;
         //@include display-flex;
         //@include flex-direction-column;
         //@include justify-content-space-between;

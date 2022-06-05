@@ -5,13 +5,15 @@
 
 import React from 'react'
 import { PlusOutlined } from '@ant-design/icons'
+import metadata from './_metadata.json'
 
 export const iconStyle = {
     fontSize: 15,
     color: 'rgba(255, 255, 255, 0.9)'
 }
 
-export const FilterList = [
+
+let filterList = [
     {
         key: '1',
         icon: <PlusOutlined style={ iconStyle } />,
@@ -92,6 +94,30 @@ export const FilterList = [
     }
 ]
 
+let arr = []
+for (let i = 0; i < metadata[0].attributes.length; i++) {
+    let obj = {
+        key: '1',
+        icon: <PlusOutlined style={ iconStyle } />,
+        title: 'Background',
+        filterGroup: [
+            // { title: 'Shining Gold', active: false },
+            // { title: 'Shining Red', active: false },
+            // { title: 'Shining Silver', active: false }
+        ]
+    }
+    obj.key = i + 1
+    obj.title = metadata[0].attributes[i].trait_type
+    for (let j = 0; j < 10; j++) {
+        obj.filterGroup.push(
+            { title: 'B' + (j + 1), active: false }
+        )
+    }
+    arr.push(obj)
+}
+filterList = arr
+
+export const FilterList = filterList
 // 1 Background: Shining Gold, Shining Red, Shining Silver...
 // 2 Body: NINJA, SUPER, Leopard, Rainbow...
 // 3 Ear: Lemon Yellow, Cherry...

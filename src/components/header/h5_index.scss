@@ -100,6 +100,21 @@
         @include cursor-pointer;
         @include transition-all-ease;
       }
+      .con-r-logouth5 {
+        width: 100%;
+        height: .44 * 2rem;
+        background: #F84848;
+        border-color: #F84848;
+        border-radius: .08 * 2rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: .15 * 2rem;
+        line-height: .44 * 2rem;
+        color: $mainTextColor;
+        @include cursor-pointer;
+        @include transition-all-ease;
+        margin-bottom: .08 * 2rem;
+      }
       .con-r-ic {
         display: flex;
         align-items: center;

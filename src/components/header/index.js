@@ -56,6 +56,7 @@ const Headers = function (props) {
             console.log(res)
             setAccount(null)
             setIsLogin(null)
+            seth5modal(false)
         }).catch(err => {
             console.log(err)
         })
@@ -166,6 +167,7 @@ const Headers = function (props) {
                         </div>
                     </div>
                     <div>
+                        { isLogin && <div className={ 'con-r-logouth5' } onClick={ () => DisConnect() }>Sign Out</div> }
                         <div className={ 'con-r-mint' } onClick={ () => handleNavigate('/mint') }>MINT</div>
                         <div className={ 'con-r-ic' }>
                             <div className={'con-r-icz'}>
