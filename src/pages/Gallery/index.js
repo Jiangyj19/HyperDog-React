@@ -335,7 +335,7 @@ class Gallery extends Component {
                         <div className={ 'gallery-filters-btn' } onClick={ () => this.handleResetFilters() }>Reset Filters</div>
                     </div>
                     <div className={ 'gallery-list-nft-view' } id={ 'scrollableDiv' }>
-                        <Spin spinning={this.state.loading}>
+                        <Spin spinning={ this.state.loading }>
                             <InfiniteScroll
                                 dataLength={ this.state.viewData.length }
                                 next={ this.loadMoreData1 }

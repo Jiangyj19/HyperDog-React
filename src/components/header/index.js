@@ -2,10 +2,11 @@
  * author: ღ
  * date: 2022/5/25
  */
-import React, { Fragment, useState, useEffect } from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 import './index.scss'
 import './h5_index.scss'
 import web3Method from './../../web3/index'
+import Web3 from 'web3/dist/web3.min.js'
 import Logo from './../../assets/images/LOGO.png'
 import Logoh5 from './../../assets/images/h5/LOGO.png'
 import Breadcrumbs from './../../assets/images/h5/Breadcrumbs.png'
@@ -22,7 +23,7 @@ const Headers = function (props) {
 
     let info = web3Method.getWeb3Info()
 
-    const [ isLogin, setIsLogin ] = useState(info ? info.isLogin : null)
+    const [ isLogin, setIsLogin ] = useState(info.isLogin ? info.isLogin : null)
     const [ tabsToggle, setTabsToggle ] = useState('')
     const [ networkLoading, setNetworkLoading ] = useState(false)
     const [ h5buy, seth5buy ] = useState(false)
@@ -46,10 +47,12 @@ const Headers = function (props) {
             console.log('res', res)
             setAccount(info.viewAccounts)
             setIsLogin(info.isLogin)
+            // console.log(web3Method.getWeb3Info())
         }).catch(err => {
             console.log(err)
         })
     }
+
 
     function DisConnect () {
         web3Method.DisConnect().then(res => {
@@ -61,6 +64,36 @@ const Headers = function (props) {
             console.log(err)
         })
     }
+
+
+
+    useEffect(() => {
+        console.log(isLogin)
+        if (window.ethereum) {
+            try {
+                window.ethereum.on("accountsChanged", (accounts) => {
+                    if (!!isLogin) {
+                        const web3 = new Web3(window.ethereum)
+                        window._FE_provider = window.ethereum
+                        window._FE_web3 = web3
+                        if (accounts) {
+                            let s = accounts[0].slice(0, 5)
+                            let e = accounts[0].substring(accounts[0].length - 4, accounts[0].length)
+                            web3Method.web3Obj.chainID = web3Method.hex2int(window.ethereum.chainId)
+                            web3Method.web3Obj.accounts = accounts
+                            web3Method.web3Obj.isLogin = true
+                            web3Method.web3Obj.viewAccounts = s + '...' + e
+                            window.localStorage.setItem(web3Method.web3Info, JSON.stringify(web3Method.web3Obj))
+                            setAccount(s + '...' + e)
+                            // console.log(web3Method.getWeb3Info())
+                        }
+                    }
+                })
+            } catch (e) {
+                DisConnect()
+            }
+        }
+    },[])
 
     useEffect(() => {
         setTabsToggle(props.location.pathname)
